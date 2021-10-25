@@ -1,6 +1,7 @@
 package com.coliwogg.gemsandcrystals.block;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
+import com.coliwogg.gemsandcrystals.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
@@ -25,7 +26,7 @@ public class ModBlocks {
 
     private static Item registerBlockItem(String name, Block block) {
         return Registry.register(Registry.ITEM, new Identifier(GemsAndCrystals.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings().group(ItemGroup.MISC)));
+                new BlockItem(block, new FabricItemSettings().group(ModItemGroup.GEMS_AND_CRYSTALS)));
     }
 
     public static void registerModBlocks() {

@@ -1,5 +1,7 @@
 {
   "item.gemsandcrystals.ruby": "Ruby",
 
-  "block.gemsandcrystals.ruby_ore": "Ruby Ore"
+  "block.gemsandcrystals.ruby_ore": "Ruby Ore",
+
+  "itemGroup.gemsandcrystals.gemsandcrystals": "Gems and Crystals Mod"
 }
