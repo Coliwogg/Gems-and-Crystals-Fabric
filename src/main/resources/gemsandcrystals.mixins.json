@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.coliwogg.gemsandcrystals.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+  ],
+  "client": [
+    "GemsAndCrystalsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
