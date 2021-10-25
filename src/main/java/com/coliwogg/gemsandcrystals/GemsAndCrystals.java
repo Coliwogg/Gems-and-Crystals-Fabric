@@ -2,6 +2,7 @@ package com.coliwogg.gemsandcrystals;
 
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
 import com.coliwogg.gemsandcrystals.item.ModItems;
+import com.coliwogg.gemsandcrystals.world.gen.OreGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,7 +24,6 @@ public class GemsAndCrystals implements ModInitializer {
 
 		ModItems.registerModItems();
         ModBlocks.registerModBlocks();
-
-        LOGGER.info("Hello Fabric world!");
+        OreGeneration.registerOreGeneration();
     }
 }
