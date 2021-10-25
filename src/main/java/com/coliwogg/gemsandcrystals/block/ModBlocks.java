@@ -19,7 +19,17 @@ public class ModBlocks {
 
     public static final Block RUBY_ORE;
     public static final Block DEEPSLATE_RUBY_ORE;
+    public static final Block SAPPHIRE_ORE;
+    public static final Block DEEPSLATE_SAPPHIRE_ORE;
+    public static final Block TOPAZ_ORE;
+    public static final Block DEEPSLATE_TOPAZ_ORE;
+    public static final Block AMETHYST_ORE;
+    public static final Block DEEPSLATE_AMETHYST_ORE;
+    public static final Block QUARTZ_ORE;
+    public static final Block DEEPSLATE_QUARTZ_ORE;
     public static final Block RUBY_BLOCK;
+    public static final Block SAPPHIRE_BLOCK;
+    public static final Block TOPAZ_BLOCK;
 
     static {
         RUBY_ORE = registerBlock("ruby_ore",
@@ -28,8 +38,39 @@ public class ModBlocks {
         DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore",
                 new OreBlock(FabricBlockSettings.copyOf(RUBY_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5F, 3.0F)
                         .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(3, 7)));
+        SAPPHIRE_ORE = registerBlock("sapphire_ore",
+                new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)
+                        .breakByTool(FabricToolTags.PICKAXES, 2), UniformIntProvider.create(3, 7)));
+        DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore",
+                new OreBlock(FabricBlockSettings.copyOf(SAPPHIRE_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5F, 3.0F)
+                        .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(3, 7)));
+        TOPAZ_ORE = registerBlock("topaz_ore",
+                new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)
+                        .breakByTool(FabricToolTags.PICKAXES, 2), UniformIntProvider.create(2, 5)));
+        DEEPSLATE_TOPAZ_ORE = registerBlock("deepslate_topaz_ore",
+                new OreBlock(FabricBlockSettings.copyOf(TOPAZ_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5F, 3.0F)
+                        .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(2, 5)));
+        AMETHYST_ORE = registerBlock("amethyst_ore",
+                new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)
+                        .breakByTool(FabricToolTags.PICKAXES, 2), UniformIntProvider.create(2, 5)));
+        DEEPSLATE_AMETHYST_ORE = registerBlock("deepslate_amethyst_ore",
+                new OreBlock(FabricBlockSettings.copyOf(AMETHYST_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5F, 3.0F)
+                        .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(2, 5)));
+        QUARTZ_ORE = registerBlock("quartz_ore",
+                new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)
+                        .breakByTool(FabricToolTags.PICKAXES, 2), UniformIntProvider.create(2, 5)));
+        DEEPSLATE_QUARTZ_ORE = registerBlock("deepslate_quartz_ore",
+                new OreBlock(FabricBlockSettings.copyOf(QUARTZ_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5F, 3.0F)
+                        .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(2, 5)));
+
         RUBY_BLOCK = registerBlock("ruby_block",
                 new Block(FabricBlockSettings.of(Material.METAL, MapColor.BRIGHT_RED).requiresTool().strength(5.0F, 6.0F)
+                        .sounds(BlockSoundGroup.METAL).breakByTool(FabricToolTags.PICKAXES, 2)));
+        SAPPHIRE_BLOCK = registerBlock("sapphire_block",
+                new Block(FabricBlockSettings.of(Material.METAL, MapColor.BLUE).requiresTool().strength(5.0F, 6.0F)
+                        .sounds(BlockSoundGroup.METAL).breakByTool(FabricToolTags.PICKAXES, 2)));
+        TOPAZ_BLOCK = registerBlock("topaz_block",
+                new Block(FabricBlockSettings.of(Material.METAL, MapColor.ORANGE).requiresTool().strength(5.0F, 6.0F)
                         .sounds(BlockSoundGroup.METAL).breakByTool(FabricToolTags.PICKAXES, 2)));
     }
 

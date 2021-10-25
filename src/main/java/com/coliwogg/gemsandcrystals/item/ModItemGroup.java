@@ -7,6 +7,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroup {
-    public static final ItemGroup GEMS_AND_CRYSTALS = FabricItemGroupBuilder.build(new Identifier(GemsAndCrystals.MOD_ID, "gemsandcrystals"),
-            () -> new ItemStack(ModItems.RUBY));
+    public static final ItemGroup GEMS_AND_CRYSTALS = FabricItemGroupBuilder.build(
+            new Identifier(GemsAndCrystals.MOD_ID, "gemsandcrystals"), () -> new ItemStack(ModItems.RUBY));
 }

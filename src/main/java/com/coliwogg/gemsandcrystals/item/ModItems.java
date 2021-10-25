@@ -8,8 +8,15 @@ import net.minecraft.util.registry.Registry;
 
 public class ModItems {
 
-    public static final Item RUBY = registerItem("ruby",
-            new Item(new FabricItemSettings().group(ModItemGroup.GEMS_AND_CRYSTALS)));
+    public static final Item RUBY;
+    public static final Item SAPPHIRE;
+    public static final Item TOPAZ;
+
+    static {
+        RUBY = registerItem("ruby", new Item(new FabricItemSettings().group(ModItemGroup.GEMS_AND_CRYSTALS)));
+        SAPPHIRE = registerItem("sapphire", new Item(new FabricItemSettings().group(ModItemGroup.GEMS_AND_CRYSTALS)));
+        TOPAZ = registerItem("topaz", new Item(new FabricItemSettings().group(ModItemGroup.GEMS_AND_CRYSTALS)));
+    }
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(GemsAndCrystals.MOD_ID, name), item);

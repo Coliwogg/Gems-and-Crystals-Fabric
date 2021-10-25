@@ -4,8 +4,12 @@ import com.coliwogg.gemsandcrystals.block.ModBlocks;
 import net.minecraft.block.Block;
 
 public enum OreType {
-    RUBY(ModBlocks.RUBY_ORE, ModBlocks.DEEPSLATE_RUBY_ORE, 4, 15, 4, true);
-    ;
+    RUBY(ModBlocks.RUBY_ORE, ModBlocks.DEEPSLATE_RUBY_ORE, 4, 15, 2, true),
+    SAPPHIRE(ModBlocks.SAPPHIRE_ORE, ModBlocks.DEEPSLATE_SAPPHIRE_ORE, 4, 15, 2, true),
+    TOPAZ(ModBlocks.TOPAZ_ORE, ModBlocks.DEEPSLATE_TOPAZ_ORE, 4, 31, 4, true),
+    AMETHYST(ModBlocks.AMETHYST_ORE, ModBlocks.DEEPSLATE_AMETHYST_ORE, 4, 31, 4, true),
+    QUARTZ(ModBlocks.QUARTZ_ORE, ModBlocks.DEEPSLATE_QUARTZ_ORE, 4, 47, 4, true);
+
     private final Block block;
     private final Block deepslateBlock;
     private final int minHeight;
