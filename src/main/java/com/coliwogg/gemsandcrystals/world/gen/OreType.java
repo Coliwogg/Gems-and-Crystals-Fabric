@@ -1,14 +1,15 @@
 package com.coliwogg.gemsandcrystals.world.gen;
 
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
+import com.coliwogg.gemsandcrystals.config.ModConfigs;
 import net.minecraft.block.Block;
 
 public enum OreType {
-    RUBY(ModBlocks.RUBY_ORE, ModBlocks.DEEPSLATE_RUBY_ORE, 4, 15, 2, true),
-    SAPPHIRE(ModBlocks.SAPPHIRE_ORE, ModBlocks.DEEPSLATE_SAPPHIRE_ORE, 4, 15, 2, true),
-    TOPAZ(ModBlocks.TOPAZ_ORE, ModBlocks.DEEPSLATE_TOPAZ_ORE, 4, 31, 4, true),
-    AMETHYST(ModBlocks.AMETHYST_ORE, ModBlocks.DEEPSLATE_AMETHYST_ORE, 4, 31, 4, true),
-    QUARTZ(ModBlocks.QUARTZ_ORE, ModBlocks.DEEPSLATE_QUARTZ_ORE, 4, 47, 4, true);
+    RUBY(ModBlocks.RUBY_ORE, ModBlocks.DEEPSLATE_RUBY_ORE, ModConfigs.RUBY_MIN_HEIGHT, ModConfigs.RUBY_MAX_HEIGHT, ModConfigs.RUBY_VEIN_COUNT, ModConfigs.GENERATE_RUBY),
+    SAPPHIRE(ModBlocks.SAPPHIRE_ORE, ModBlocks.DEEPSLATE_SAPPHIRE_ORE, ModConfigs.SAPPHIRE_MIN_HEIGHT, ModConfigs.SAPPHIRE_MAX_HEIGHT, ModConfigs.SAPPHIRE_VEIN_COUNT, ModConfigs.GENERATE_SAPPHIRE),
+    TOPAZ(ModBlocks.TOPAZ_ORE, ModBlocks.DEEPSLATE_TOPAZ_ORE, ModConfigs.TOPAZ_MIN_HEIGHT, ModConfigs.TOPAZ_MAX_HEIGHT, ModConfigs.TOPAZ_VEIN_COUNT, ModConfigs.GENERATE_TOPAZ),
+    AMETHYST(ModBlocks.AMETHYST_ORE, ModBlocks.DEEPSLATE_AMETHYST_ORE, ModConfigs.AMETHYST_MIN_HEIGHT, ModConfigs.AMETHYST_MAX_HEIGHT, ModConfigs.AMETHYST_VEIN_COUNT, ModConfigs.GENERATE_AMETHYST),
+    QUARTZ(ModBlocks.QUARTZ_ORE, ModBlocks.DEEPSLATE_QUARTZ_ORE, ModConfigs.QUARTZ_MIN_HEIGHT, ModConfigs.QUARTZ_MAX_HEIGHT, ModConfigs.QUARTZ_VEIN_COUNT, ModConfigs.GENERATE_QUARTZ);
 
     private final Block block;
     private final Block deepslateBlock;

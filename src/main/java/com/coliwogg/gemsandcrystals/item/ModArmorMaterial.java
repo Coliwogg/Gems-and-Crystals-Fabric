@@ -1,5 +1,6 @@
 package com.coliwogg.gemsandcrystals.item;
 
+import com.coliwogg.gemsandcrystals.config.ModConfigs;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemConvertible;
@@ -12,22 +13,28 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements ArmorMaterial {
-    RUBY("ruby", 35, new int[]{3, 6, 8, 3}, 13, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F, 0.0F, () -> {
+    RUBY("ruby", ModConfigs.RUBY_DURABILITY_MULTIPLIER, new int[]{ModConfigs.RUBY_BOOTS_STRENGTH, ModConfigs.RUBY_LEGGINGS_STRENGTH, ModConfigs.RUBY_CHESTPLATE_STRENGTH, ModConfigs.RUBY_HELMET_STRENGTH},
+            ModConfigs.RUBY_ARMOR_ENCHANTABILITY, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, ModConfigs.RUBY_TOUGHNESS, ModConfigs.RUBY_KNOCKBACK_RESISTANCE, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{ModItems.RUBY});
     }),
-    SAPPHIRE("sapphire", 35, new int[]{3, 6, 8, 3}, 13, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{ModItems.RUBY});
+    SAPPHIRE("sapphire", ModConfigs.SAPPHIRE_DURABILITY_MULTIPLIER, new int[]{ModConfigs.SAPPHIRE_BOOTS_STRENGTH, ModConfigs.SAPPHIRE_LEGGINGS_STRENGTH, ModConfigs.SAPPHIRE_CHESTPLATE_STRENGTH, ModConfigs.SAPPHIRE_HELMET_STRENGTH},
+            ModConfigs.SAPPHIRE_ARMOR_ENCHANTABILITY, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, ModConfigs.SAPPHIRE_TOUGHNESS, ModConfigs.SAPPHIRE_KNOCKBACK_RESISTANCE, () -> {
+        return Ingredient.ofItems(new ItemConvertible[]{ModItems.SAPPHIRE});
     }),
-    EMERALD("emerald", 34, new int[]{3, 6, 8, 3}, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
+    EMERALD("emerald", ModConfigs.EMERALD_DURABILITY_MULTIPLIER, new int[]{ModConfigs.EMERALD_BOOTS_STRENGTH, ModConfigs.EMERALD_LEGGINGS_STRENGTH, ModConfigs.EMERALD_CHESTPLATE_STRENGTH, ModConfigs.EMERALD_HELMET_STRENGTH},
+            ModConfigs.EMERALD_ARMOR_ENCHANTABILITY, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, ModConfigs.EMERALD_TOUGHNESS, ModConfigs.EMERALD_KNOCKBACK_RESISTANCE, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.EMERALD});
     }),
-    TOPAZ("topaz", 30, new int[]{2, 5, 6, 2}, 11, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.5F, 0.0F, () -> {
+    TOPAZ("topaz", ModConfigs.TOPAZ_DURABILITY_MULTIPLIER, new int[]{ModConfigs.TOPAZ_BOOTS_STRENGTH, ModConfigs.TOPAZ_LEGGINGS_STRENGTH, ModConfigs.TOPAZ_CHESTPLATE_STRENGTH, ModConfigs.TOPAZ_HELMET_STRENGTH},
+            ModConfigs.TOPAZ_ARMOR_ENCHANTABILITY, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, ModConfigs.TOPAZ_TOUGHNESS, ModConfigs.TOPAZ_KNOCKBACK_RESISTANCE, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{ModItems.TOPAZ});
     }),
-    AMETHYST("amethyst", 25, new int[]{2, 5, 6, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, 0.0F, () -> {
+    AMETHYST("amethyst", ModConfigs.AMETHYST_DURABILITY_MULTIPLIER, new int[]{ModConfigs.AMETHYST_BOOTS_STRENGTH, ModConfigs.AMETHYST_LEGGINGS_STRENGTH, ModConfigs.AMETHYST_CHESTPLATE_STRENGTH, ModConfigs.AMETHYST_HELMET_STRENGTH},
+            ModConfigs.AMETHYST_ARMOR_ENCHANTABILITY, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, ModConfigs.AMETHYST_TOUGHNESS, ModConfigs.AMETHYST_KNOCKBACK_RESISTANCE, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.AMETHYST_SHARD});
     }),
-    QUARTZ("quartz", 20, new int[]{1, 4, 5, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F, 0.0F, () -> {
+    QUARTZ("quartz", ModConfigs.QUARTZ_DURABILITY_MULTIPLIER, new int[]{ModConfigs.QUARTZ_BOOTS_STRENGTH, ModConfigs.QUARTZ_LEGGINGS_STRENGTH, ModConfigs.QUARTZ_CHESTPLATE_STRENGTH, ModConfigs.QUARTZ_HELMET_STRENGTH},
+            ModConfigs.QUARTZ_ARMOR_ENCHANTABILITY, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, ModConfigs.QUARTZ_TOUGHNESS, ModConfigs.QUARTZ_KNOCKBACK_RESISTANCE, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.QUARTZ});
     });
 

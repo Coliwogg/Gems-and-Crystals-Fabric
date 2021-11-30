@@ -1,6 +1,7 @@
 package com.coliwogg.gemsandcrystals;
 
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
+import com.coliwogg.gemsandcrystals.config.ModConfigs;
 import com.coliwogg.gemsandcrystals.item.ModItems;
 import com.coliwogg.gemsandcrystals.world.gen.OreGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -21,6 +22,7 @@ public class GemsAndCrystals implements ModInitializer {
         // This code runs as soon as Minecraft is in a mod-load-ready state.
         // However, some things (like resources) may still be uninitialized.
         // Proceed with mild caution.
+        ModConfigs.registerConfigs();
 
 		ModItems.registerModItems();
         ModBlocks.registerModBlocks();

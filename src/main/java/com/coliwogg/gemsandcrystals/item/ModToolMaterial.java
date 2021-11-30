@@ -1,5 +1,6 @@
 package com.coliwogg.gemsandcrystals.item;
 
+import com.coliwogg.gemsandcrystals.config.ModConfigs;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
@@ -9,22 +10,22 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    RUBY(3, 1791, 8.5F, 3.5F, 13, () -> {
+    RUBY(ModConfigs.RUBY_MINING_LEVEL, ModConfigs.RUBY_ITEM_DURABILITY, ModConfigs.RUBY_MINING_LEVEL, ModConfigs.RUBY_ATTACK_DAMAGE, ModConfigs.RUBY_ENCHANTABILITY, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{ModItems.RUBY});
     }),
-    SAPPHIRE(3, 1791, 8.5F, 3.5F, 13, () -> {
+    SAPPHIRE(ModConfigs.SAPPHIRE_MINING_LEVEL, ModConfigs.SAPPHIRE_ITEM_DURABILITY, ModConfigs.SAPPHIRE_MINING_SPEED, ModConfigs.SAPPHIRE_ATTACK_DAMAGE, ModConfigs.SAPPHIRE_ENCHANTABILITY, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{ModItems.SAPPHIRE});
     }),
-    EMERALD(3, 1561, 8.5F, 3.0F, 12, () -> {
+    EMERALD(ModConfigs.EMERALD_MINING_LEVEL, ModConfigs.SAPPHIRE_ITEM_DURABILITY, ModConfigs.EMERALD_MINING_SPEED, ModConfigs.EMERALD_ATTACK_DAMAGE, ModConfigs.EMERALD_ENCHANTABILITY, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.EMERALD});
     }),
-    TOPAZ(2, 1331, 7.0F, 2.5F, 11, () -> {
+    TOPAZ(ModConfigs.TOPAZ_MINING_LEVEL, ModConfigs.TOPAZ_ITEM_DURABILITY, ModConfigs.TOPAZ_MINING_SPEED, ModConfigs.TOPAZ_ATTACK_DAMAGE, ModConfigs.TOPAZ_ENCHANTABILITY, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{ModItems.TOPAZ});
     }),
-    AMETHYST(2, 871, 7.0F, 2.0F, 11, () -> {
+    AMETHYST(ModConfigs.AMETHYST_MINING_LEVEL, ModConfigs.AMETHYST_ITEM_DURABILITY, ModConfigs.AMETHYST_MINING_SPEED, ModConfigs.AMETHYST_ATTACK_DAMAGE, ModConfigs.AMETHYST_ENCHANTABILITY, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.AMETHYST_SHARD});
     }),
-    QUARTZ(2, 551, 6.5F, 1.5F, 9, () -> {
+    QUARTZ(ModConfigs.QUARTZ_MINING_LEVEL, ModConfigs.QUARTZ_ITEM_DURABILITY, ModConfigs.QUARTZ_MINING_SPEED, ModConfigs.QUARTZ_ATTACK_DAMAGE, ModConfigs.QUARTZ_ENCHANTABILITY, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.QUARTZ});
     });
 
