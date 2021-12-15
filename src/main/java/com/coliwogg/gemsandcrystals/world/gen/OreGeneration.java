@@ -1,7 +1,6 @@
 package com.coliwogg.gemsandcrystals.world.gen;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
-import com.google.common.collect.ImmutableList;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.Block;
@@ -13,7 +12,6 @@ import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.*;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 
 import java.util.List;
 

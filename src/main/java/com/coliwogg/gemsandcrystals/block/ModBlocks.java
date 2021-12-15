@@ -4,7 +4,6 @@ import com.coliwogg.gemsandcrystals.GemsAndCrystals;
 import com.coliwogg.gemsandcrystals.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
@@ -52,7 +51,7 @@ public class ModBlocks {
                         .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(2, 5)));
         AMETHYST_ORE = registerBlock("amethyst_ore",
                 new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)
-                       , UniformIntProvider.create(2, 5)));
+                        , UniformIntProvider.create(2, 5)));
         DEEPSLATE_AMETHYST_ORE = registerBlock("deepslate_amethyst_ore",
                 new OreBlock(FabricBlockSettings.copyOf(AMETHYST_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5F, 3.0F)
                         .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(2, 5)));

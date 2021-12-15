@@ -24,7 +24,7 @@ public class GemsAndCrystals implements ModInitializer {
         // Proceed with mild caution.
         ModConfigs.registerConfigs();
 
-		ModItems.registerModItems();
+        ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         OreGeneration.registerOreGeneration();
     }

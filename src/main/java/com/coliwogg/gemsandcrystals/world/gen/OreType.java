@@ -52,6 +52,7 @@ public enum OreType {
     public int getVeinSize() {
         return veinSize;
     }
+
     public boolean getGenerateOreToggle() {
         return generateOreToggle;
     }

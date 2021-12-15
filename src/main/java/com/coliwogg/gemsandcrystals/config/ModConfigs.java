@@ -257,31 +257,31 @@ public class ModConfigs {
         RUBY_MIN_HEIGHT = CONFIG.getOrDefault("ore_gen.ruby_ore.ruby_min_height", -80);
         RUBY_MAX_HEIGHT = CONFIG.getOrDefault("ore_gen.ruby_ore.ruby_max_height", 16);
         RUBY_VEIN_COUNT = CONFIG.getOrDefault("ore_gen.ruby_ore.ruby_vein_count", 3);
-        RUBY_VEIN_SIZE  = CONFIG.getOrDefault("ore_gen.ruby_ore.ruby_vein_size", 3);
+        RUBY_VEIN_SIZE = CONFIG.getOrDefault("ore_gen.ruby_ore.ruby_vein_size", 3);
         GENERATE_RUBY = CONFIG.getOrDefault("ore_gen.ruby_ore.generate_ruby", true);
 
         SAPPHIRE_MIN_HEIGHT = CONFIG.getOrDefault("ore_gen.sapphire_ore.sapphire_min_height", -80);
         SAPPHIRE_MAX_HEIGHT = CONFIG.getOrDefault("ore_gen.sapphire_ore.sapphire_max_height", 16);
         SAPPHIRE_VEIN_COUNT = CONFIG.getOrDefault("ore_gen.sapphire_ore.sapphire_vein_count", 3);
-        SAPPHIRE_VEIN_SIZE  = CONFIG.getOrDefault("ore_gen.sapphire_ore.sapphire_vein_size", 3);
+        SAPPHIRE_VEIN_SIZE = CONFIG.getOrDefault("ore_gen.sapphire_ore.sapphire_vein_size", 3);
         GENERATE_SAPPHIRE = CONFIG.getOrDefault("ore_gen.sapphire_ore.generate_sapphire", true);
 
         TOPAZ_MIN_HEIGHT = CONFIG.getOrDefault("ore_gen.topaz_ore.topaz_min_height", -80);
         TOPAZ_MAX_HEIGHT = CONFIG.getOrDefault("ore_gen.topaz_ore.topaz_max_height", 24);
         TOPAZ_VEIN_COUNT = CONFIG.getOrDefault("ore_gen.topaz_ore.topaz_vein_count", 4);
-        TOPAZ_VEIN_SIZE  = CONFIG.getOrDefault("ore_gen.topaz_ore.topaz_vein_size", 4);
+        TOPAZ_VEIN_SIZE = CONFIG.getOrDefault("ore_gen.topaz_ore.topaz_vein_size", 4);
         GENERATE_TOPAZ = CONFIG.getOrDefault("ore_gen.topaz_ore.generate_topaz", true);
 
         AMETHYST_MIN_HEIGHT = CONFIG.getOrDefault("ore_gen.amethyst_ore.amethyst_min_height", -80);
         AMETHYST_MAX_HEIGHT = CONFIG.getOrDefault("ore_gen.amethyst_ore.amethyst_max_height", 32);
         AMETHYST_VEIN_COUNT = CONFIG.getOrDefault("ore_gen.amethyst_ore.amethyst_vein_count", 4);
-        AMETHYST_VEIN_SIZE  = CONFIG.getOrDefault("ore_gen.amethyst_ore.amethyst_vein_size", 4);
+        AMETHYST_VEIN_SIZE = CONFIG.getOrDefault("ore_gen.amethyst_ore.amethyst_vein_size", 4);
         GENERATE_AMETHYST = CONFIG.getOrDefault("ore_gen.amethyst_ore.generate_amethyst", true);
 
         QUARTZ_MIN_HEIGHT = CONFIG.getOrDefault("ore_gen.quartz_ore.quartz_min_height", -80);
         QUARTZ_MAX_HEIGHT = CONFIG.getOrDefault("ore_gen.quartz_ore.quartz_max_height", 48);
         QUARTZ_VEIN_COUNT = CONFIG.getOrDefault("ore_gen.quartz_ore.quartz_vein_count", 4);
-        QUARTZ_VEIN_SIZE  = CONFIG.getOrDefault("ore_gen.quartz_ore.quartz_vein_size", 4);
+        QUARTZ_VEIN_SIZE = CONFIG.getOrDefault("ore_gen.quartz_ore.quartz_vein_size", 4);
         GENERATE_QUARTZ = CONFIG.getOrDefault("ore_gen.quartz_ore.generate_quartz", true);
 
         RUBY_MINING_LEVEL = CONFIG.getOrDefault("tool_material.ruby.ruby_mining_level", 3);
