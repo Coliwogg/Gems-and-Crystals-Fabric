@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "gemsandcrystals:sapphire_ore",
+    "gemsandcrystals:deepslate_sapphire_ore",
+    "gemsandcrystals:andesite_sapphire_ore",
+    "gemsandcrystals:diorite_sapphire_ore",
+    "gemsandcrystals:granite_sapphire_ore",
+    "gemsandcrystals:tuff_sapphire_ore"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "gemsandcrystals:topaz_ore",
+    "gemsandcrystals:deepslate_topaz_ore",
+    "gemsandcrystals:andesite_topaz_ore",
+    "gemsandcrystals:diorite_topaz_ore",
+    "gemsandcrystals:granite_topaz_ore",
+    "gemsandcrystals:tuff_topaz_ore"
+  ]
+}

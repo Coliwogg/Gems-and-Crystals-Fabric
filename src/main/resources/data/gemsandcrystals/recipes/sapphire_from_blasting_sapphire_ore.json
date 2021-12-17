@@ -2,7 +2,7 @@
   "type": "minecraft:blasting",
   "group": "sapphire",
   "ingredient": {
-    "item": "gemsandcrystals:sapphire_ore"
+    "tag": "gemsandcrystals:sapphire_ores"
   },
   "result": "gemsandcrystals:sapphire",
   "experience": 1.0,

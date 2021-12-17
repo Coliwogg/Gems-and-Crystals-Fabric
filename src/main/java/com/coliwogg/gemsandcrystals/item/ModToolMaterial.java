@@ -10,12 +10,12 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    RUBY(ModConfigs.RUBY_MINING_LEVEL, ModConfigs.RUBY_ITEM_DURABILITY, ModConfigs.RUBY_MINING_LEVEL, ModConfigs.RUBY_ATTACK_DAMAGE, ModConfigs.RUBY_ENCHANTABILITY, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.RUBY})),
-    SAPPHIRE(ModConfigs.SAPPHIRE_MINING_LEVEL, ModConfigs.SAPPHIRE_ITEM_DURABILITY, ModConfigs.SAPPHIRE_MINING_SPEED, ModConfigs.SAPPHIRE_ATTACK_DAMAGE, ModConfigs.SAPPHIRE_ENCHANTABILITY, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.SAPPHIRE})),
-    EMERALD(ModConfigs.EMERALD_MINING_LEVEL, ModConfigs.SAPPHIRE_ITEM_DURABILITY, ModConfigs.EMERALD_MINING_SPEED, ModConfigs.EMERALD_ATTACK_DAMAGE, ModConfigs.EMERALD_ENCHANTABILITY, () -> Ingredient.ofItems(new ItemConvertible[]{Items.EMERALD})),
-    TOPAZ(ModConfigs.TOPAZ_MINING_LEVEL, ModConfigs.TOPAZ_ITEM_DURABILITY, ModConfigs.TOPAZ_MINING_SPEED, ModConfigs.TOPAZ_ATTACK_DAMAGE, ModConfigs.TOPAZ_ENCHANTABILITY, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.TOPAZ})),
-    AMETHYST(ModConfigs.AMETHYST_MINING_LEVEL, ModConfigs.AMETHYST_ITEM_DURABILITY, ModConfigs.AMETHYST_MINING_SPEED, ModConfigs.AMETHYST_ATTACK_DAMAGE, ModConfigs.AMETHYST_ENCHANTABILITY, () -> Ingredient.ofItems(new ItemConvertible[]{Items.AMETHYST_SHARD})),
-    QUARTZ(ModConfigs.QUARTZ_MINING_LEVEL, ModConfigs.QUARTZ_ITEM_DURABILITY, ModConfigs.QUARTZ_MINING_SPEED, ModConfigs.QUARTZ_ATTACK_DAMAGE, ModConfigs.QUARTZ_ENCHANTABILITY, () -> Ingredient.ofItems(new ItemConvertible[]{Items.QUARTZ}));
+    RUBY(ModConfigs.RUBY_MINING_LEVEL, ModConfigs.RUBY_ITEM_DURABILITY, ModConfigs.RUBY_MINING_LEVEL, ModConfigs.RUBY_ATTACK_DAMAGE, ModConfigs.RUBY_ENCHANTABILITY, () -> Ingredient.ofItems(ModItems.RUBY)),
+    SAPPHIRE(ModConfigs.SAPPHIRE_MINING_LEVEL, ModConfigs.SAPPHIRE_ITEM_DURABILITY, ModConfigs.SAPPHIRE_MINING_SPEED, ModConfigs.SAPPHIRE_ATTACK_DAMAGE, ModConfigs.SAPPHIRE_ENCHANTABILITY, () -> Ingredient.ofItems(ModItems.SAPPHIRE)),
+    EMERALD(ModConfigs.EMERALD_MINING_LEVEL, ModConfigs.SAPPHIRE_ITEM_DURABILITY, ModConfigs.EMERALD_MINING_SPEED, ModConfigs.EMERALD_ATTACK_DAMAGE, ModConfigs.EMERALD_ENCHANTABILITY, () -> Ingredient.ofItems(Items.EMERALD)),
+    TOPAZ(ModConfigs.TOPAZ_MINING_LEVEL, ModConfigs.TOPAZ_ITEM_DURABILITY, ModConfigs.TOPAZ_MINING_SPEED, ModConfigs.TOPAZ_ATTACK_DAMAGE, ModConfigs.TOPAZ_ENCHANTABILITY, () -> Ingredient.ofItems(ModItems.TOPAZ)),
+    AMETHYST(ModConfigs.AMETHYST_MINING_LEVEL, ModConfigs.AMETHYST_ITEM_DURABILITY, ModConfigs.AMETHYST_MINING_SPEED, ModConfigs.AMETHYST_ATTACK_DAMAGE, ModConfigs.AMETHYST_ENCHANTABILITY, () -> Ingredient.ofItems(Items.AMETHYST_SHARD)),
+    QUARTZ(ModConfigs.QUARTZ_MINING_LEVEL, ModConfigs.QUARTZ_ITEM_DURABILITY, ModConfigs.QUARTZ_MINING_SPEED, ModConfigs.QUARTZ_ATTACK_DAMAGE, ModConfigs.QUARTZ_ENCHANTABILITY, () -> Ingredient.ofItems(Items.QUARTZ));
 
     private final int miningLevel;
     private final int itemDurability;
@@ -54,6 +54,6 @@ public enum ModToolMaterial implements ToolMaterial {
     }
 
     public Ingredient getRepairIngredient() {
-        return (Ingredient) this.repairIngredient.get();
+        return this.repairIngredient.get();
     }
 }

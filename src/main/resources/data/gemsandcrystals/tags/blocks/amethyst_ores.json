@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "gemsandcrystals:amethyst_ore",
+    "gemsandcrystals:deepslate_amethyst_ore",
+    "gemsandcrystals:andesite_amethyst_ore",
+    "gemsandcrystals:diorite_amethyst_ore",
+    "gemsandcrystals:granite_amethyst_ore",
+    "gemsandcrystals:tuff_amethyst_ore"
+  ]
+}

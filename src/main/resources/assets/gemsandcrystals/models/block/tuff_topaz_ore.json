@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "gemsandcrystals:block/tuff_topaz_ore"
+  }
+}

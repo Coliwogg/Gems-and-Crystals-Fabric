@@ -2,7 +2,7 @@
   "type": "minecraft:blasting",
   "group": "quartz",
   "ingredient": {
-    "item": "gemsandcrystals:quartz_ore"
+    "tag": "gemsandcrystals:quartz_ores"
   },
   "result": "minecraft:quartz",
   "experience": 1.0,

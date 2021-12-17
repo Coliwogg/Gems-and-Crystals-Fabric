@@ -1,0 +1,63 @@
+{
+  "config": {
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "minecraft:granite"
+        },
+        "state": {
+          "Name": "gemsandcrystals:granite_topaz_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "minecraft:andesite"
+        },
+        "state": {
+          "Name": "gemsandcrystals:andesite_topaz_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "minecraft:diorite"
+        },
+        "state": {
+          "Name": "gemsandcrystals:diorite_topaz_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "minecraft:tuff"
+        },
+        "state": {
+          "Name": "gemsandcrystals:tuff_topaz_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "minecraft:stone"
+        },
+        "state": {
+          "Name": "oresandmetals:topaz_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "minecraft:deepslate"
+        },
+        "state": {
+          "Name": "oresandmetals:deepslate_topaz_ore"
+        }
+      }
+    ],
+    "size": 4,
+    "discard_chance_on_air_exposure": 0.0
+  },
+  "type": "minecraft:ore"
+}

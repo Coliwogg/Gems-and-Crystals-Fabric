@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "gemsandcrystals:quartz_ore",
+    "gemsandcrystals:deepslate_quartz_ore",
+    "gemsandcrystals:andesite_quartz_ore",
+    "gemsandcrystals:diorite_quartz_ore",
+    "gemsandcrystals:granite_quartz_ore",
+    "gemsandcrystals:tuff_quartz_ore"
+  ]
+}

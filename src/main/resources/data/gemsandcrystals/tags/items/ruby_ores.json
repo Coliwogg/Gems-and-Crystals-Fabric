@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "gemsandcrystals:ruby_ore",
+    "gemsandcrystals:deepslate_ruby_ore",
+    "gemsandcrystals:andesite_ruby_ore",
+    "gemsandcrystals:diorite_ruby_ore",
+    "gemsandcrystals:granite_ruby_ore",
+    "gemsandcrystals:tuff_ruby_ore"
+  ]
+}

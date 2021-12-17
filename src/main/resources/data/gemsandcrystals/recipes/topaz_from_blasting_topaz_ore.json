@@ -2,7 +2,7 @@
   "type": "minecraft:blasting",
   "group": "topaz",
   "ingredient": {
-    "item": "gemsandcrystals:topaz_ore"
+    "tag": "gemsandcrystals:topaz_ores"
   },
   "result": "gemsandcrystals:topaz",
   "experience": 1.0,

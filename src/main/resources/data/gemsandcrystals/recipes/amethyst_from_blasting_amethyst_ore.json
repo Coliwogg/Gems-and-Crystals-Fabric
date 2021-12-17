@@ -2,7 +2,7 @@
   "type": "minecraft:blasting",
   "group": "amethyst",
   "ingredient": {
-    "item": "gemsandcrystals:amethyst_ore"
+    "tag": "gemsandcrystals:amethyst_ores"
   },
   "result": "minecraft:amethyst_shard",
   "experience": 1.0,

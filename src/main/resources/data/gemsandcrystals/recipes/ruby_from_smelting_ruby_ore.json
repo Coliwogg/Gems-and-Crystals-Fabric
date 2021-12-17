@@ -2,7 +2,7 @@
   "type": "minecraft:smelting",
   "group": "ruby",
   "ingredient": {
-    "item": "gemsandcrystals:ruby_ore"
+    "tag": "gemsandcrystals:ruby_ores"
   },
   "result": "gemsandcrystals:ruby",
   "experience": 1.0,
