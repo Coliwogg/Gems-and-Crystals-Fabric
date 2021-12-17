@@ -1,4 +1,4 @@
-# Fabric Example Mod
+# Gems and Crystals for FabricMC
 
 ## Setup
 
