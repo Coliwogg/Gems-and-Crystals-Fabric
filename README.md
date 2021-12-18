@@ -1,9 +1,5 @@
-# Fabric Example Mod
+# Gems and Crystals for FabricMC ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Coliwogg/Gems-and-Crystals-Fabric?display_name=tag) ![build](https://github.com/Coliwogg/Gems-And-Crystals-Fabric/actions/workflows/check_build.yml/badge.svg)
 
-## Setup
+<https://www.curseforge.com/minecraft/mc-mods/gems-and-crystals>
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+![Gems and crystals header](https://i.imgur.com/nT9uSDz.png)
