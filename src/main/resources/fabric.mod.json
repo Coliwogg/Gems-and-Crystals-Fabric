@@ -31,7 +31,7 @@
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17",
-    "mores": "*"
+    "universal_ores": "*"
   },
   "suggests": {
     "another-mod": "*"
