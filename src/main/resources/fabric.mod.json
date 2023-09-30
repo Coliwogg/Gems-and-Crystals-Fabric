@@ -1,29 +1,29 @@
 {
 	"schemaVersion": 1,
-	"id": "gems-and-crystals",
+	"id": "gemsandcrystals",
 	"version": "${version}",
 	"name": "Gems and Crystals",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Gems and Crystals for Minecraft 1.20.2 adds new gems and crystals to find within your Minecraft world!\\nWith this mod installed, you can find rubies, sapphires, topaz, amethyst, and quartz within the caves of the Minecraft Overworld.\\nOnce you find these new gems and crystals you can craft tools and armour to use as you explore your Minecraft world\\nEnjoy",
 	"authors": [
-		"Me!"
+		"Coliwogg"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://legacy.curseforge.com/minecraft/mc-mods/gems-and-crystals",
+		"sources": "https://github.com/Coliwogg/Gems-and-Crystals-Fabric"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/gems-and-crystals/icon.png",
+	"license": "MIT",
+	"icon": "assets/gemsandcrystals/logo.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.coliwogg.gemsandcrystals.ExampleMod"
+          "com.coliwogg.gemsandcrystals.GemsAndCrystals"
 		],
 		"fabric-datagen": [
-			"com.coliwogg.gemsandcrystals.ExampleModDataGenerator"
+			"com.coliwogg.gemsandcrystals.GemsAndCrystalsDataGenerator"
 		]
 	},
 	"mixins": [
-		"gems-and-crystals.mixins.json"
+		"gemsandcrystals.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.22",
