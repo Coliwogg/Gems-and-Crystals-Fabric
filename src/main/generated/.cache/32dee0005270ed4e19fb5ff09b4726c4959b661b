@@ -1,4 +1,4 @@
-// 1.20.2	2023-09-30T12:15:12.0237521	Gems and Crystals/Recipes
+// 1.20.2	2023-10-01T12:36:31.6451756	Gems and Crystals/Recipes
 6d4301515bc17de491f267b150cb89217c137698 data\gemsandcrystals\recipes\quartz_hoe.json
 535dda41a84f27a640147012a01258daaa7bc72a data\gemsandcrystals\recipes\quartz_from_blasting_deepslate_quartz_ore.json
 3295fcfced6b6e0629d23c7efdbf77d13d7f2c48 data\gemsandcrystals\advancements\recipes\combat\topaz_horse_armor.json
@@ -98,6 +98,7 @@ da48a7f27f0046bdc097521fdb5a1c96d0696fd3 data\gemsandcrystals\recipes\ruby_hoe.j
 b861726bc83416d9a134e5b46318816bf032a13c data\gemsandcrystals\advancements\recipes\misc\sapphire_from_smelting_deepslate_sapphire_ore.json
 2772b081064cc84faa72b668427ff05f67bfb02e data\gemsandcrystals\recipes\sapphire_shovel.json
 3af0eeef1db83511ab256670c8c983e1ab813fc3 data\gemsandcrystals\recipes\topaz_leggings.json
+05080f2a9938995f7b25f6cbac1eb19448106e7a data\gemsandcrystals\recipes\quartz_from_quartz_block.json
 e3a6f16f0fa4b302fdfc467d7dd17452e876812c data\gemsandcrystals\recipes\sapphire_leggings.json
 76ad6f52a67e8072f2e6483385300bcded05d304 data\gemsandcrystals\recipes\ruby_helmet.json
 482fbc377907d3dd8cf3b5a694544a59ff034dd6 data\gemsandcrystals\recipes\topaz_helmet.json
@@ -148,6 +149,7 @@ d612c7b35e1c8e2d791d7c4bd7b6e465c782c6e1 data\gemsandcrystals\advancements\recip
 1bf2a13737ff457bef97d4edd1649e2b8ecb19b1 data\gemsandcrystals\recipes\ruby_from_blasting_ruby_ore.json
 55bea4c75d1da77c77ddb66606f38c5e3ea76d42 data\gemsandcrystals\advancements\recipes\tools\amethyst_axe.json
 860afdacc5a3b5adb79a19ad41866ee2a7cc74d7 data\gemsandcrystals\recipes\quartz_from_blasting_quartz_ore.json
+11500ba5afdd633bc4d034aa17ce0619b7d787ee data\gemsandcrystals\advancements\recipes\misc\quartz_from_quartz_block.json
 8a5a2fa7a21ed86fb393f260b1fe11ccf0129ea6 data\gemsandcrystals\advancements\recipes\tools\emerald_pickaxe.json
 639f12eb4d48031a1a1eb86c1882d8271bb51083 data\gemsandcrystals\advancements\recipes\combat\sapphire_chestplate.json
 f11009e586881667febdeecaa6215a89b09020fe data\gemsandcrystals\recipes\quartz_shovel.json
