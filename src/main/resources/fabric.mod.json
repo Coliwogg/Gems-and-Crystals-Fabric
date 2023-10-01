@@ -1,38 +1,37 @@
 {
-  "schemaVersion": 1,
-  "id": "gemsandcrystals",
-  "version": "${version}",
-
-  "name": "Gems and Crystals Mod",
-  "description": "This mods adds different gems, crystals, armour and tools to the world of Minecraft.",
-  "authors": [
-    "Coliwogg"
-  ],
-  "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/gems-and-crystals",
-    "sources": "https://github.com/Coliwogg/Gems-and-Crystals-Fabric"
-  },
-
-  "license": "CC0-1.0",
-  "icon": "assets/gemsandcrystals/icon.png",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "com.coliwogg.gemsandcrystals.GemsAndCrystals"
-    ]
-  },
-  "mixins": [
-    "gemsandcrystals.mixins.json"
-  ],
-
-  "depends": {
-    "fabricloader": ">=0.11.3",
-    "fabric": "*",
-    "minecraft": "1.18.x",
-    "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
-  }
+	"schemaVersion": 1,
+	"id": "gemsandcrystals",
+	"version": "${version}",
+	"name": "Gems and Crystals",
+	"description": "Gems and Crystals for Minecraft 1.20.2 adds new gems and crystals to find within your Minecraft world!\\nWith this mod installed, you can find rubies, sapphires, topaz, amethyst, and quartz within the caves of the Minecraft Overworld.\\nOnce you find these new gems and crystals you can craft tools and armour to use as you explore your Minecraft world\\nEnjoy",
+	"authors": [
+		"Coliwogg"
+	],
+	"contact": {
+		"homepage": "https://legacy.curseforge.com/minecraft/mc-mods/gems-and-crystals",
+		"sources": "https://github.com/Coliwogg/Gems-and-Crystals-Fabric"
+	},
+	"license": "MIT",
+	"icon": "assets/gemsandcrystals/logo.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "com.coliwogg.gemsandcrystals.GemsAndCrystals"
+		],
+		"fabric-datagen": [
+			"com.coliwogg.gemsandcrystals.GemsAndCrystalsDataGenerator"
+		]
+	},
+	"mixins": [
+		"gemsandcrystals.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
 }
