@@ -10,9 +10,11 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> RUBY_SMELTABLES = List.of(ModBlocks.RUBY_ORE, ModBlocks.DEEPSLATE_RUBY_ORE);
@@ -21,8 +23,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> AMETHYST_SMELTABLES = List.of(ModBlocks.AMETHYST_ORE, ModBlocks.DEEPSLATE_AMETHYST_ORE);
     private static final List<ItemConvertible> QUARTZ_SMELTABLES = List.of(ModBlocks.QUARTZ_ORE, ModBlocks.DEEPSLATE_QUARTZ_ORE);
 
-    public ModRecipeProvider(FabricDataOutput output) {
-        super(output);
+    public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
     }
 
     @Override
@@ -116,7 +118,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('|', Items.STICK)
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(getRecipeName(output)));
     }
 
     public static void offerHoeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -128,7 +130,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('|', Items.STICK)
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(getRecipeName(output)));
     }
 
     public static void offerPickaxeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -140,7 +142,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('|', Items.STICK)
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(getRecipeName(output)));
     }
 
     public static void offerShovelRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -152,7 +154,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('|', Items.STICK)
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(getRecipeName(output)));
     }
 
     public static void offerSwordRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -164,7 +166,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('|', Items.STICK)
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(getRecipeName(output)));
     }
 
     public static void offerHelmetRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -173,7 +175,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("# #")
                 .input('#', input)
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(getRecipeName(output)));
     }
 
     public static void offerChestplateRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -183,7 +185,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("###")
                 .input('#', input)
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(getRecipeName(output)));
     }
 
     public static void offerLeggingsRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -193,7 +195,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("# #")
                 .input('#', input)
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(getRecipeName(output)));
     }
 
     public static void offerBootsRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -202,7 +204,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("# #")
                 .input('#', input)
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(getRecipeName(output)));
     }
 
     public static void offerHorseArmorRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
@@ -213,6 +215,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('#', input)
                 .input('X', Items.LEATHER_HORSE_ARMOR)
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(getRecipeName(output)));
     }
 }
