@@ -31,6 +31,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_QUARTZ_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.RUBY_BLOCK)
+                .add(ModBlocks.RUBY_ORE)
+                .add(ModBlocks.DEEPSLATE_RUBY_ORE)
+                .add(ModBlocks.SAPPHIRE_BLOCK)
+                .add(ModBlocks.SAPPHIRE_ORE)
+                .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE)
                 .add(ModBlocks.TOPAZ_BLOCK)
                 .add(ModBlocks.TOPAZ_ORE)
                 .add(ModBlocks.DEEPSLATE_TOPAZ_ORE)
@@ -39,12 +45,5 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.QUARTZ_ORE)
                 .add(ModBlocks.DEEPSLATE_QUARTZ_ORE);
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.RUBY_BLOCK)
-                .add(ModBlocks.RUBY_ORE)
-                .add(ModBlocks.DEEPSLATE_RUBY_ORE)
-                .add(ModBlocks.SAPPHIRE_BLOCK)
-                .add(ModBlocks.SAPPHIRE_ORE)
-                .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
     }
 }

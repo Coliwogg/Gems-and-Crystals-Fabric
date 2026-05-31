@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final ItemGroup GEMS_AND_CRYSTALS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(GemsAndCrystals.MOD_ID, "gemsandcrystals"),
+            Identifier.of(GemsAndCrystals.MOD_ID, "gemsandcrystals"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.gemsandcrystals"))
                     .icon(() -> new ItemStack(ModItems.RUBY)).entries((displayContext, entries) -> {
                         entries.add(ModItems.RUBY);
