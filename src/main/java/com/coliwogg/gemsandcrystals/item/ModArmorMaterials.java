@@ -1,14 +1,16 @@
 package com.coliwogg.gemsandcrystals.item;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
+import com.coliwogg.gemsandcrystals.util.ModTags;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Items;
+import net.minecraft.item.equipment.ArmorMaterial;
+import net.minecraft.item.equipment.EquipmentModel;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
@@ -19,66 +21,59 @@ import java.util.function.Supplier;
 
 public class ModArmorMaterials {
 
-    public static final RegistryEntry<ArmorMaterial> RUBY_ARMOR_MATERIAL = registerArmorMaterial("ruby",
-            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS, 3);
-                map.put(ArmorItem.Type.LEGGINGS, 6);
-                map.put(ArmorItem.Type.CHESTPLATE, 8);
-                map.put(ArmorItem.Type.HELMET, 3);
-                map.put(ArmorItem.Type.BODY, 4);
-            }), 35, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.RUBY),
-                    List.of(new ArmorMaterial.Layer(Identifier.of(GemsAndCrystals.MOD_ID, "ruby"))), 0, 0));
+    public static EquipmentModel RUBY = EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "ruby")).build();
 
-    public static final RegistryEntry<ArmorMaterial> SAPPHIRE_ARMOR_MATERIAL = registerArmorMaterial("sapphire",
-            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS, 3);
-                map.put(ArmorItem.Type.LEGGINGS, 6);
-                map.put(ArmorItem.Type.CHESTPLATE, 8);
-                map.put(ArmorItem.Type.HELMET, 3);
-                map.put(ArmorItem.Type.BODY, 4);
-            }), 35, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.SAPPHIRE),
-                    List.of(new ArmorMaterial.Layer(Identifier.of(GemsAndCrystals.MOD_ID, "sapphire"))), 2.5f, 0.1f));
+    public static final ArmorMaterial RUBY_ARMOR_MATERIAL = new ArmorMaterial(35, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 3);
+        map.put(EquipmentType.LEGGINGS, 6);
+        map.put(EquipmentType.CHESTPLATE, 8);
+        map.put(EquipmentType.HELMET, 3);
+        map.put(EquipmentType.BODY, 11);
+    }), 16, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,2.5f,0.1f, ModTags.Items.RUBY_REPAIR,
+            Identifier.of(GemsAndCrystals.MOD_ID, "ruby"));
 
-    public static final RegistryEntry<ArmorMaterial> EMERALD_ARMOR_MATERIAL = registerArmorMaterial("emerald",
-            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS, 2);
-                map.put(ArmorItem.Type.LEGGINGS, 6);
-                map.put(ArmorItem.Type.CHESTPLATE, 8);
-                map.put(ArmorItem.Type.HELMET, 3);
-                map.put(ArmorItem.Type.BODY, 4);
-            }), 32, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(Items.EMERALD),
-                    List.of(new ArmorMaterial.Layer(Identifier.of(GemsAndCrystals.MOD_ID, "emerald"))), 1.5f, 0.1f));
+    public static final ArmorMaterial SAPPHIRE_ARMOR_MATERIAL = new ArmorMaterial(35, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 3);
+        map.put(EquipmentType.LEGGINGS, 6);
+        map.put(EquipmentType.CHESTPLATE, 8);
+        map.put(EquipmentType.HELMET, 3);
+        map.put(EquipmentType.BODY, 11);
+    }), 16, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,2.5f,0.1f, ModTags.Items.SAPPHIRE_REPAIR,
+            Identifier.of(GemsAndCrystals.MOD_ID, "sapphire"));
 
-    public static final RegistryEntry<ArmorMaterial> TOPAZ_ARMOR_MATERIAL = registerArmorMaterial("topaz",
-            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS, 2);
-                map.put(ArmorItem.Type.LEGGINGS, 6);
-                map.put(ArmorItem.Type.CHESTPLATE, 8);
-                map.put(ArmorItem.Type.HELMET, 3);
-                map.put(ArmorItem.Type.BODY, 4);
-            }), 22, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, () -> Ingredient.ofItems(ModItems.TOPAZ),
-                    List.of(new ArmorMaterial.Layer(Identifier.of(GemsAndCrystals.MOD_ID, "topaz"))), 0f, 0f));
+    public static final ArmorMaterial EMERALD_ARMOR_MATERIAL = new ArmorMaterial(32, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 2);
+        map.put(EquipmentType.LEGGINGS, 6);
+        map.put(EquipmentType.CHESTPLATE, 8);
+        map.put(EquipmentType.HELMET, 3);
+        map.put(EquipmentType.BODY, 11);
+    }), 14, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,1.5f,0.1f, ModTags.Items.EMERALD_REPAIR,
+            Identifier.of(GemsAndCrystals.MOD_ID, "emerald"));
 
-    public static final RegistryEntry<ArmorMaterial> AMETHYST_ARMOR_MATERIAL = registerArmorMaterial("amethyst",
-            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {map.put(ArmorItem.Type.BOOTS, 2);
-                map.put(ArmorItem.Type.LEGGINGS, 5);
-                map.put(ArmorItem.Type.CHESTPLATE, 6);
-                map.put(ArmorItem.Type.HELMET, 2);
-                map.put(ArmorItem.Type.BODY, 4);
-            }), 32, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, () -> Ingredient.ofItems(Items.AMETHYST_SHARD),
-                    List.of(new ArmorMaterial.Layer(Identifier.of(GemsAndCrystals.MOD_ID, "amethyst"))), 0f, 0f));
+    public static final ArmorMaterial TOPAZ_ARMOR_MATERIAL = new ArmorMaterial(22, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 2);
+        map.put(EquipmentType.LEGGINGS, 6);
+        map.put(EquipmentType.CHESTPLATE, 8);
+        map.put(EquipmentType.HELMET, 3);
+        map.put(EquipmentType.BODY, 9);
+    }), 13, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,0f,0f, ModTags.Items.TOPAZ_REPAIR,
+            Identifier.of(GemsAndCrystals.MOD_ID, "topaz"));
 
-    public static final RegistryEntry<ArmorMaterial> QUARTZ_ARMOR_MATERIAL = registerArmorMaterial("quartz",
-            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS, 1);
-                map.put(ArmorItem.Type.LEGGINGS, 3);
-                map.put(ArmorItem.Type.CHESTPLATE, 5);
-                map.put(ArmorItem.Type.HELMET, 2);
-                map.put(ArmorItem.Type.BODY, 4);
-            }), 32, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, () -> Ingredient.ofItems(Items.QUARTZ),
-                    List.of(new ArmorMaterial.Layer(Identifier.of(GemsAndCrystals.MOD_ID, "quartz"))), 0f, 0f));
+    public static final ArmorMaterial AMETHYST_ARMOR_MATERIAL = new ArmorMaterial(18, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 2);
+        map.put(EquipmentType.LEGGINGS, 5);
+        map.put(EquipmentType.CHESTPLATE, 6);
+        map.put(EquipmentType.HELMET, 2);
+        map.put(EquipmentType.BODY, 9);
+    }), 13, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,0f,0f, ModTags.Items.AMETHYST_REPAIR,
+            Identifier.of(GemsAndCrystals.MOD_ID, "amethyst"));
 
-    public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material) {
-        return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(GemsAndCrystals.MOD_ID, name), material.get());
-    }
+    public static final ArmorMaterial QUARTZ_ARMOR_MATERIAL = new ArmorMaterial(10, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 1);
+        map.put(EquipmentType.LEGGINGS, 3);
+        map.put(EquipmentType.CHESTPLATE, 5);
+        map.put(EquipmentType.HELMET, 2);
+        map.put(EquipmentType.BODY, 7);
+    }), 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,0f,0f, ModTags.Items.QUARTZ_REPAIR,
+            Identifier.of(GemsAndCrystals.MOD_ID, "quartz"));
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:ruby_from_blasting_ruby_ore"
+        "recipe": "minecraft:ruby_from_blasting_ruby_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "gemsandcrystals:ruby_from_blasting_ruby_ore"
+      "minecraft:ruby_from_blasting_ruby_ore"
     ]
   }
 }
