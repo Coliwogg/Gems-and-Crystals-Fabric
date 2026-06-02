@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "quartz",
   "ingredients": [
-    {
-      "item": "minecraft:quartz_block"
-    }
+    "minecraft:quartz_block"
   ],
   "result": {
     "count": 4,
