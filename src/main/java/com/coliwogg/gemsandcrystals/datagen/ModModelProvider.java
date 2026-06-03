@@ -1,16 +1,13 @@
 package com.coliwogg.gemsandcrystals.datagen;
 
-import com.coliwogg.gemsandcrystals.GemsAndCrystals;
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
+import com.coliwogg.gemsandcrystals.item.ModArmorMaterials;
 import com.coliwogg.gemsandcrystals.item.ModItems;
+import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.equipment.EquipmentModel;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.data.BlockStateModelGenerator;
+import net.minecraft.client.data.ItemModelGenerator;
+import net.minecraft.client.data.Models;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -71,43 +68,40 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.QUARTZ_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.QUARTZ_HOE, Models.HANDHELD);
 
-        itemModelGenerator.registerArmor(ModItems.RUBY_HELMET, Identifier.of(GemsAndCrystals.MOD_ID, "ruby"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "ruby")).build(), EquipmentSlot.HEAD);
-        itemModelGenerator.registerArmor(ModItems.RUBY_CHESTPLATE, Identifier.of(GemsAndCrystals.MOD_ID, "ruby"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "ruby")).build(), EquipmentSlot.CHEST);
-        itemModelGenerator.registerArmor(ModItems.RUBY_LEGGINGS, Identifier.of(GemsAndCrystals.MOD_ID, "ruby"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "ruby")).build(), EquipmentSlot.LEGS);
-        itemModelGenerator.registerArmor(ModItems.RUBY_BOOTS, Identifier.of(GemsAndCrystals.MOD_ID, "ruby"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "ruby")).build(), EquipmentSlot.FEET);
+        itemModelGenerator.registerArmor(ModItems.RUBY_HELMET, ModArmorMaterials.RUBY_KEY, "helmet", false);
+        itemModelGenerator.registerArmor(ModItems.RUBY_CHESTPLATE, ModArmorMaterials.RUBY_KEY, "chestplate", false);
+        itemModelGenerator.registerArmor(ModItems.RUBY_LEGGINGS, ModArmorMaterials.RUBY_KEY, "leggings", false);
+        itemModelGenerator.registerArmor(ModItems.RUBY_BOOTS, ModArmorMaterials.RUBY_KEY, "boots", false);
 
-        itemModelGenerator.registerArmor(ModItems.SAPPHIRE_HELMET, Identifier.of(GemsAndCrystals.MOD_ID, "sapphire"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "sapphire")).build(), EquipmentSlot.HEAD);
-        itemModelGenerator.registerArmor(ModItems.SAPPHIRE_CHESTPLATE, Identifier.of(GemsAndCrystals.MOD_ID, "sapphire"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "sapphire")).build(), EquipmentSlot.CHEST);
-        itemModelGenerator.registerArmor(ModItems.SAPPHIRE_LEGGINGS, Identifier.of(GemsAndCrystals.MOD_ID, "sapphire"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "sapphire")).build(), EquipmentSlot.LEGS);
-        itemModelGenerator.registerArmor(ModItems.SAPPHIRE_BOOTS, Identifier.of(GemsAndCrystals.MOD_ID, "sapphire"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "sapphire")).build(), EquipmentSlot.FEET);
+        itemModelGenerator.registerArmor(ModItems.SAPPHIRE_HELMET, ModArmorMaterials.SAPPHIRE_KEY, "helmet", false);
+        itemModelGenerator.registerArmor(ModItems.SAPPHIRE_CHESTPLATE, ModArmorMaterials.SAPPHIRE_KEY, "chestplate", false);
+        itemModelGenerator.registerArmor(ModItems.SAPPHIRE_LEGGINGS, ModArmorMaterials.SAPPHIRE_KEY, "leggings", false);
+        itemModelGenerator.registerArmor(ModItems.SAPPHIRE_BOOTS, ModArmorMaterials.SAPPHIRE_KEY, "boots", false);
 
-        itemModelGenerator.registerArmor(ModItems.EMERALD_HELMET, Identifier.of(GemsAndCrystals.MOD_ID, "emerald"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "emerald")).build(), EquipmentSlot.HEAD);
-        itemModelGenerator.registerArmor(ModItems.EMERALD_CHESTPLATE, Identifier.of(GemsAndCrystals.MOD_ID, "emerald"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "emerald")).build(), EquipmentSlot.CHEST);
-        itemModelGenerator.registerArmor(ModItems.EMERALD_LEGGINGS, Identifier.of(GemsAndCrystals.MOD_ID, "emerald"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "emerald")).build(), EquipmentSlot.LEGS);
-        itemModelGenerator.registerArmor(ModItems.EMERALD_BOOTS, Identifier.of(GemsAndCrystals.MOD_ID, "emerald"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "emerald")).build(), EquipmentSlot.FEET);
+        itemModelGenerator.registerArmor(ModItems.EMERALD_HELMET, ModArmorMaterials.EMERALD_KEY, "helmet", false);
+        itemModelGenerator.registerArmor(ModItems.EMERALD_CHESTPLATE, ModArmorMaterials.EMERALD_KEY, "chestplate", false);
+        itemModelGenerator.registerArmor(ModItems.EMERALD_LEGGINGS, ModArmorMaterials.EMERALD_KEY, "leggings", false);
+        itemModelGenerator.registerArmor(ModItems.EMERALD_BOOTS, ModArmorMaterials.EMERALD_KEY, "boots", false);
 
-        itemModelGenerator.registerArmor(ModItems.TOPAZ_HELMET, Identifier.of(GemsAndCrystals.MOD_ID, "topaz"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "topaz")).build(), EquipmentSlot.HEAD);
-        itemModelGenerator.registerArmor(ModItems.TOPAZ_CHESTPLATE, Identifier.of(GemsAndCrystals.MOD_ID, "topaz"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "topaz")).build(), EquipmentSlot.CHEST);
-        itemModelGenerator.registerArmor(ModItems.TOPAZ_LEGGINGS, Identifier.of(GemsAndCrystals.MOD_ID, "topaz"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "topaz")).build(), EquipmentSlot.LEGS);
-        itemModelGenerator.registerArmor(ModItems.TOPAZ_BOOTS, Identifier.of(GemsAndCrystals.MOD_ID, "topaz"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "topaz")).build(), EquipmentSlot.FEET);
+        itemModelGenerator.registerArmor(ModItems.TOPAZ_HELMET, ModArmorMaterials.TOPAZ_KEY, "helmet", false);
+        itemModelGenerator.registerArmor(ModItems.TOPAZ_CHESTPLATE, ModArmorMaterials.TOPAZ_KEY, "chestplate", false);
+        itemModelGenerator.registerArmor(ModItems.TOPAZ_LEGGINGS, ModArmorMaterials.TOPAZ_KEY, "leggings", false);
+        itemModelGenerator.registerArmor(ModItems.TOPAZ_BOOTS, ModArmorMaterials.TOPAZ_KEY, "boots", false);
 
-        itemModelGenerator.registerArmor(ModItems.AMETHYST_HELMET, Identifier.of(GemsAndCrystals.MOD_ID, "amethyst"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "amethyst")).build(), EquipmentSlot.HEAD);
-        itemModelGenerator.registerArmor(ModItems.AMETHYST_CHESTPLATE, Identifier.of(GemsAndCrystals.MOD_ID, "amethyst"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "amethyst")).build(), EquipmentSlot.CHEST);
-        itemModelGenerator.registerArmor(ModItems.AMETHYST_LEGGINGS, Identifier.of(GemsAndCrystals.MOD_ID, "amethyst"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "amethyst")).build(), EquipmentSlot.LEGS);
-        itemModelGenerator.registerArmor(ModItems.AMETHYST_BOOTS, Identifier.of(GemsAndCrystals.MOD_ID, "amethyst"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "amethyst")).build(), EquipmentSlot.FEET);
+        itemModelGenerator.registerArmor(ModItems.AMETHYST_HELMET, ModArmorMaterials.AMETHYST_KEY, "helmet", false);
+        itemModelGenerator.registerArmor(ModItems.AMETHYST_CHESTPLATE, ModArmorMaterials.AMETHYST_KEY, "chestplate", false);
+        itemModelGenerator.registerArmor(ModItems.AMETHYST_LEGGINGS, ModArmorMaterials.AMETHYST_KEY, "leggings", false);
+        itemModelGenerator.registerArmor(ModItems.AMETHYST_BOOTS, ModArmorMaterials.AMETHYST_KEY, "boots", false);
 
-        itemModelGenerator.registerArmor(ModItems.QUARTZ_HELMET, Identifier.of(GemsAndCrystals.MOD_ID, "quartz"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "quartz")).build(), EquipmentSlot.HEAD);
-        itemModelGenerator.registerArmor(ModItems.QUARTZ_CHESTPLATE, Identifier.of(GemsAndCrystals.MOD_ID, "quartz"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "quartz")).build(), EquipmentSlot.CHEST);
-        itemModelGenerator.registerArmor(ModItems.QUARTZ_LEGGINGS, Identifier.of(GemsAndCrystals.MOD_ID, "quartz"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "quartz")).build(), EquipmentSlot.LEGS);
-        itemModelGenerator.registerArmor(ModItems.QUARTZ_BOOTS, Identifier.of(GemsAndCrystals.MOD_ID, "quartz"), EquipmentModel.builder().addHumanoidLayers(Identifier.of(GemsAndCrystals.MOD_ID, "quartz")).build(), EquipmentSlot.FEET);
-
+        itemModelGenerator.registerArmor(ModItems.QUARTZ_HELMET, ModArmorMaterials.QUARTZ_KEY, "helmet", false);
+        itemModelGenerator.registerArmor(ModItems.QUARTZ_CHESTPLATE, ModArmorMaterials.QUARTZ_KEY, "chestplate", false);
+        itemModelGenerator.registerArmor(ModItems.QUARTZ_LEGGINGS, ModArmorMaterials.QUARTZ_KEY, "leggings", false);
+        itemModelGenerator.registerArmor(ModItems.QUARTZ_BOOTS, ModArmorMaterials.QUARTZ_KEY, "boots", false);
         itemModelGenerator.register(ModItems.RUBY_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.SAPPHIRE_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.EMERALD_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOPAZ_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.AMETHYST_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUARTZ_HORSE_ARMOR, Models.GENERATED);
-
-
     }
 }
