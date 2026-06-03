@@ -39,7 +39,7 @@ jobs:
 
       - name: build (Windows)
         if: runner.os == 'Windows'
-        run: gradlew.bat clean build
+        run: .\gradlew.bat clean build
 
       - name: capture build artifacts
         uses: actions/upload-artifact@v4
