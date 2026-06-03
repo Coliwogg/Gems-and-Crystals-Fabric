@@ -1,10 +1,5 @@
 {
   "layers": {
-    "wolf_body": [
-      {
-        "texture": "gemsandcrystals:emerald"
-      }
-    ],
     "horse_body": [
       {
         "texture": "gemsandcrystals:emerald"

@@ -24,6 +24,38 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider  {
                         ModItems.AMETHYST_HELMET, ModItems.AMETHYST_CHESTPLATE, ModItems.AMETHYST_LEGGINGS, ModItems.AMETHYST_BOOTS,
                         ModItems.QUARTZ_HELMET, ModItems.QUARTZ_CHESTPLATE, ModItems.QUARTZ_LEGGINGS, ModItems.QUARTZ_BOOTS);
 
+        valueLookupBuilder(ItemTags.HEAD_ARMOR)
+                .add(ModItems.RUBY_HELMET,
+                        ModItems.SAPPHIRE_HELMET,
+                        ModItems.EMERALD_HELMET,
+                        ModItems.TOPAZ_HELMET,
+                        ModItems.AMETHYST_HELMET,
+                        ModItems.QUARTZ_HELMET);
+
+        valueLookupBuilder(ItemTags.CHEST_ARMOR)
+                .add(ModItems.RUBY_CHESTPLATE,
+                        ModItems.SAPPHIRE_CHESTPLATE,
+                        ModItems.EMERALD_CHESTPLATE,
+                        ModItems.TOPAZ_CHESTPLATE,
+                        ModItems.AMETHYST_CHESTPLATE,
+                        ModItems.QUARTZ_CHESTPLATE);
+
+        valueLookupBuilder(ItemTags.LEG_ARMOR)
+                .add(ModItems.RUBY_LEGGINGS,
+                        ModItems.SAPPHIRE_LEGGINGS,
+                        ModItems.EMERALD_LEGGINGS,
+                        ModItems.TOPAZ_LEGGINGS,
+                        ModItems.AMETHYST_LEGGINGS,
+                        ModItems.QUARTZ_LEGGINGS);
+
+        valueLookupBuilder(ItemTags.FOOT_ARMOR)
+                .add(ModItems.RUBY_BOOTS,
+                        ModItems.SAPPHIRE_BOOTS,
+                        ModItems.EMERALD_BOOTS,
+                        ModItems.TOPAZ_BOOTS,
+                        ModItems.AMETHYST_BOOTS,
+                        ModItems.QUARTZ_BOOTS);
+
         valueLookupBuilder(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.RUBY)
                 .add(ModItems.SAPPHIRE)

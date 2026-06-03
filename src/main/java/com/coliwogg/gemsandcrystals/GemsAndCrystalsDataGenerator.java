@@ -1,11 +1,11 @@
 package com.coliwogg.gemsandcrystals;
 
+import com.coliwogg.gemsandcrystals.datagen.*;
 import com.coliwogg.gemsandcrystals.trim.ModTrimMaterials;
 import com.coliwogg.gemsandcrystals.world.ModConfiguredFeatures;
 import com.coliwogg.gemsandcrystals.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import com.coliwogg.gemsandcrystals.datagen.*;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 
@@ -20,6 +20,7 @@ public class GemsAndCrystalsDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModRegistryDataGenerator::new);
+		pack.addProvider(ModEquipmentAssetProvider::new);
 	}
 
 	@Override
