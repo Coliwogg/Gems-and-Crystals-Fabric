@@ -18,78 +18,78 @@ public class ModItems {
     public static final Item SAPPHIRE = registerItem("sapphire", Item::new);
     public static final Item TOPAZ = registerItem("topaz", Item::new);
 
-    public static final Item RUBY_SWORD = registerItem("ruby_sword", setting -> new SwordItem(ModToolMaterials.RUBY, 3, -2.4f, setting));
-    public static final Item RUBY_SHOVEL = registerItem("ruby_shovel", setting ->  new ShovelItem(ModToolMaterials.RUBY, 1.5f, -3f, setting));
-    public static final Item RUBY_PICKAXE = registerItem("ruby_pickaxe", setting -> new PickaxeItem(ModToolMaterials.RUBY, 1f, -2.8f, setting));
-    public static final Item RUBY_AXE = registerItem("ruby_axe", setting ->  new AxeItem(ModToolMaterials.RUBY, 5f, -3f, setting));
-    public static final Item RUBY_HOE = registerItem("ruby_hoe", setting ->  new HoeItem(ModToolMaterials.RUBY, -4f, 0f, setting));
+    public static final Item RUBY_SWORD = registerItem("ruby_sword", setting -> new Item(setting.sword(ModToolMaterials.RUBY, 3, -2.4f)));
+    public static final Item RUBY_SHOVEL = registerItem("ruby_shovel", setting -> new ShovelItem(ModToolMaterials.RUBY, 1.5f, -3f, setting));
+    public static final Item RUBY_PICKAXE = registerItem("ruby_pickaxe", setting -> new Item(setting.pickaxe(ModToolMaterials.RUBY, 1f, -2.8f)));
+    public static final Item RUBY_AXE = registerItem("ruby_axe", setting -> new AxeItem(ModToolMaterials.RUBY, 5f, -3f, setting));
+    public static final Item RUBY_HOE = registerItem("ruby_hoe", setting -> new HoeItem(ModToolMaterials.RUBY, -4f, 0f, setting));
 
-    public static final Item SAPPHIRE_SWORD = registerItem("sapphire_sword", setting -> new SwordItem(ModToolMaterials.SAPPHIRE, 3, -2.4f, setting));
+    public static final Item SAPPHIRE_SWORD = registerItem("sapphire_sword", setting -> new Item(setting.sword(ModToolMaterials.SAPPHIRE, 3, -2.4f)));
     public static final Item SAPPHIRE_SHOVEL = registerItem("sapphire_shovel", setting -> new ShovelItem(ModToolMaterials.SAPPHIRE, 1.5f, -3f, setting));
-    public static final Item SAPPHIRE_PICKAXE = registerItem("sapphire_pickaxe", setting -> new PickaxeItem(ModToolMaterials.SAPPHIRE, 1f, -2.8f, setting));
+    public static final Item SAPPHIRE_PICKAXE = registerItem("sapphire_pickaxe", setting -> new Item(setting.pickaxe(ModToolMaterials.SAPPHIRE, 1f, -2.8f)));
     public static final Item SAPPHIRE_AXE = registerItem("sapphire_axe", setting -> new AxeItem(ModToolMaterials.SAPPHIRE, 5f, -3f, setting));
     public static final Item SAPPHIRE_HOE = registerItem("sapphire_hoe", setting -> new HoeItem(ModToolMaterials.SAPPHIRE, -4f, 0f, setting));
 
-    public static final Item EMERALD_SWORD = registerItem("emerald_sword", setting -> new SwordItem(ModToolMaterials.EMERALD, 3, -2.4f, setting));
+    public static final Item EMERALD_SWORD = registerItem("emerald_sword", setting -> new Item(setting.sword(ModToolMaterials.EMERALD, 3, -2.4f)));
     public static final Item EMERALD_SHOVEL = registerItem("emerald_shovel", setting -> new ShovelItem(ModToolMaterials.EMERALD, 1.5f, -3f, setting));
-    public static final Item EMERALD_PICKAXE = registerItem("emerald_pickaxe", setting -> new PickaxeItem(ModToolMaterials.EMERALD, 1f, -2.8f, setting));
+    public static final Item EMERALD_PICKAXE = registerItem("emerald_pickaxe", setting -> new Item(setting.pickaxe(ModToolMaterials.EMERALD, 1f, -2.8f)));
     public static final Item EMERALD_AXE = registerItem("emerald_axe", setting -> new AxeItem(ModToolMaterials.EMERALD, 5f, -3f, setting));
     public static final Item EMERALD_HOE = registerItem("emerald_hoe", setting -> new HoeItem(ModToolMaterials.EMERALD, -3f, 0f, setting));
 
-    public static final Item TOPAZ_SWORD = registerItem("topaz_sword", setting -> new SwordItem(ModToolMaterials.TOPAZ, 3, -2.4f, setting));
+    public static final Item TOPAZ_SWORD = registerItem("topaz_sword", setting -> new Item(setting.sword(ModToolMaterials.TOPAZ, 3, -2.4f)));
     public static final Item TOPAZ_SHOVEL = registerItem("topaz_shovel", setting -> new ShovelItem(ModToolMaterials.TOPAZ, 2f, -3f, setting));
-    public static final Item TOPAZ_PICKAXE = registerItem("topaz_pickaxe", setting -> new PickaxeItem(ModToolMaterials.TOPAZ, 1f, -2.8f, setting));
+    public static final Item TOPAZ_PICKAXE = registerItem("topaz_pickaxe", setting -> new Item(setting.pickaxe(ModToolMaterials.TOPAZ, 1f, -2.8f)));
     public static final Item TOPAZ_AXE = registerItem("topaz_axe", setting -> new AxeItem(ModToolMaterials.TOPAZ, 6f, -3.1f, setting));
     public static final Item TOPAZ_HOE = registerItem("topaz_hoe", setting -> new HoeItem(ModToolMaterials.TOPAZ, -2f, -1f, setting));
 
-    public static final Item AMETHYST_SWORD = registerItem("amethyst_sword", setting -> new SwordItem(ModToolMaterials.AMETHYST, 2, -2.4f, setting));
+    public static final Item AMETHYST_SWORD = registerItem("amethyst_sword", setting -> new Item(setting.sword(ModToolMaterials.AMETHYST, 2, -2.4f)));
     public static final Item AMETHYST_SHOVEL = registerItem("amethyst_shovel", setting -> new ShovelItem(ModToolMaterials.AMETHYST, 1.5f, -3f, setting));
-    public static final Item AMETHYST_PICKAXE = registerItem("amethyst_pickaxe", setting -> new PickaxeItem(ModToolMaterials.AMETHYST, 1f, -2.8f, setting));
+    public static final Item AMETHYST_PICKAXE = registerItem("amethyst_pickaxe", setting -> new Item(setting.pickaxe(ModToolMaterials.AMETHYST, 1f, -2.8f)));
     public static final Item AMETHYST_AXE = registerItem("amethyst_axe", setting -> new AxeItem(ModToolMaterials.AMETHYST, 5f, -3.1f, setting));
     public static final Item AMETHYST_HOE = registerItem("amethyst_hoe", setting -> new HoeItem(ModToolMaterials.AMETHYST, -2f, -1f, setting));
 
-    public static final Item QUARTZ_SWORD = registerItem("quartz_sword", setting -> new SwordItem(ModToolMaterials.QUARTZ, 3, -2.4f, setting));
+    public static final Item QUARTZ_SWORD = registerItem("quartz_sword", setting -> new Item(setting.sword(ModToolMaterials.QUARTZ, 3, -2.4f)));
     public static final Item QUARTZ_SHOVEL = registerItem("quartz_shovel", setting -> new ShovelItem(ModToolMaterials.QUARTZ, 2f, -3f, setting));
-    public static final Item QUARTZ_PICKAXE = registerItem("quartz_pickaxe", setting -> new PickaxeItem(ModToolMaterials.QUARTZ, 1f, -2.8f, setting));
+    public static final Item QUARTZ_PICKAXE = registerItem("quartz_pickaxe", setting -> new Item(setting.pickaxe(ModToolMaterials.QUARTZ, 1f, -2.8f)));
     public static final Item QUARTZ_AXE = registerItem("quartz_axe", setting -> new AxeItem(ModToolMaterials.QUARTZ, 6f, -3.2f, setting));
     public static final Item QUARTZ_HOE = registerItem("quartz_hoe", setting -> new HoeItem(ModToolMaterials.QUARTZ, -1f, -2f, setting));
 
-    public static final Item RUBY_HELMET = registerItem("ruby_helmet", setting -> new ArmorItem(ModArmorMaterials.RUBY_ARMOR_MATERIAL, EquipmentType.HELMET, setting.maxDamage(EquipmentType.HELMET.getMaxDamage(35))));
-    public static final Item RUBY_CHESTPLATE = registerItem("ruby_chestplate", setting -> new ArmorItem(ModArmorMaterials.RUBY_ARMOR_MATERIAL, EquipmentType.CHESTPLATE, setting.maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(35))));
-    public static final Item RUBY_LEGGINGS = registerItem("ruby_leggings", setting -> new ArmorItem(ModArmorMaterials.RUBY_ARMOR_MATERIAL, EquipmentType.LEGGINGS, setting.maxDamage(EquipmentType.LEGGINGS.getMaxDamage(35))));
-    public static final Item RUBY_BOOTS = registerItem("ruby_boots", setting -> new ArmorItem(ModArmorMaterials.RUBY_ARMOR_MATERIAL, EquipmentType.BOOTS, setting.maxDamage(EquipmentType.BOOTS.getMaxDamage(35))));
+    public static final Item RUBY_HELMET = registerItem("ruby_helmet", setting -> new Item(setting.armor(ModArmorMaterials.RUBY_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item RUBY_CHESTPLATE = registerItem("ruby_chestplate", setting -> new Item(setting.armor(ModArmorMaterials.RUBY_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item RUBY_LEGGINGS = registerItem("ruby_leggings", setting -> new Item(setting.armor(ModArmorMaterials.RUBY_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item RUBY_BOOTS = registerItem("ruby_boots", setting -> new Item(setting.armor(ModArmorMaterials.RUBY_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-    public static final Item SAPPHIRE_HELMET = registerItem("sapphire_helmet", setting -> new ArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.HELMET, setting.maxDamage(EquipmentType.HELMET.getMaxDamage(35))));
-    public static final Item SAPPHIRE_CHESTPLATE = registerItem("sapphire_chestplate", setting -> new ArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE, setting.maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(35))));
-    public static final Item SAPPHIRE_LEGGINGS = registerItem("sapphire_leggings", setting -> new ArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.LEGGINGS, setting.maxDamage(EquipmentType.LEGGINGS.getMaxDamage(35))));
-    public static final Item SAPPHIRE_BOOTS = registerItem("sapphire_boots", setting -> new ArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.BOOTS, setting.maxDamage(EquipmentType.BOOTS.getMaxDamage(35))));
+    public static final Item SAPPHIRE_HELMET = registerItem("sapphire_helmet", setting -> new Item(setting.armor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item SAPPHIRE_CHESTPLATE = registerItem("sapphire_chestplate", setting -> new Item(setting.armor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item SAPPHIRE_LEGGINGS = registerItem("sapphire_leggings", setting -> new Item(setting.armor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item SAPPHIRE_BOOTS = registerItem("sapphire_boots", setting -> new Item(setting.armor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-    public static final Item EMERALD_HELMET = registerItem("emerald_helmet", setting -> new ArmorItem(ModArmorMaterials.EMERALD_ARMOR_MATERIAL, EquipmentType.HELMET, setting.maxDamage(EquipmentType.HELMET.getMaxDamage(32))));
-    public static final Item EMERALD_CHESTPLATE = registerItem("emerald_chestplate", setting -> new ArmorItem(ModArmorMaterials.EMERALD_ARMOR_MATERIAL, EquipmentType.CHESTPLATE, setting.maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(32))));
-    public static final Item EMERALD_LEGGINGS = registerItem("emerald_leggings", setting -> new ArmorItem(ModArmorMaterials.EMERALD_ARMOR_MATERIAL, EquipmentType.LEGGINGS, setting.maxDamage(EquipmentType.LEGGINGS.getMaxDamage(32))));
-    public static final Item EMERALD_BOOTS = registerItem("emerald_boots", setting -> new ArmorItem(ModArmorMaterials.EMERALD_ARMOR_MATERIAL, EquipmentType.BOOTS, setting.maxDamage(EquipmentType.BOOTS.getMaxDamage(32))));
+    public static final Item EMERALD_HELMET = registerItem("emerald_helmet", setting -> new Item(setting.armor(ModArmorMaterials.EMERALD_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item EMERALD_CHESTPLATE = registerItem("emerald_chestplate", setting -> new Item(setting.armor(ModArmorMaterials.EMERALD_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item EMERALD_LEGGINGS = registerItem("emerald_leggings", setting -> new Item(setting.armor(ModArmorMaterials.EMERALD_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item EMERALD_BOOTS = registerItem("emerald_boots", setting -> new Item(setting.armor(ModArmorMaterials.EMERALD_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-    public static final Item TOPAZ_HELMET = registerItem("topaz_helmet", setting -> new ArmorItem(ModArmorMaterials.TOPAZ_ARMOR_MATERIAL, EquipmentType.HELMET, setting.maxDamage(EquipmentType.HELMET.getMaxDamage(22))));
-    public static final Item TOPAZ_CHESTPLATE = registerItem("topaz_chestplate", setting -> new ArmorItem(ModArmorMaterials.TOPAZ_ARMOR_MATERIAL, EquipmentType.CHESTPLATE, setting.maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(22))));
-    public static final Item TOPAZ_LEGGINGS = registerItem("topaz_leggings", setting -> new ArmorItem(ModArmorMaterials.TOPAZ_ARMOR_MATERIAL, EquipmentType.LEGGINGS, setting.maxDamage(EquipmentType.LEGGINGS.getMaxDamage(22))));
-    public static final Item TOPAZ_BOOTS = registerItem("topaz_boots", setting -> new ArmorItem(ModArmorMaterials.TOPAZ_ARMOR_MATERIAL, EquipmentType.BOOTS, setting.maxDamage(EquipmentType.BOOTS.getMaxDamage(22))));
+    public static final Item TOPAZ_HELMET = registerItem("topaz_helmet", setting -> new Item(setting.armor(ModArmorMaterials.TOPAZ_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item TOPAZ_CHESTPLATE = registerItem("topaz_chestplate", setting -> new Item(setting.armor(ModArmorMaterials.TOPAZ_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item TOPAZ_LEGGINGS = registerItem("topaz_leggings", setting -> new Item(setting.armor(ModArmorMaterials.TOPAZ_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item TOPAZ_BOOTS = registerItem("topaz_boots", setting -> new Item(setting.armor(ModArmorMaterials.TOPAZ_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-    public static final Item AMETHYST_HELMET = registerItem("amethyst_helmet", setting -> new ArmorItem(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL, EquipmentType.HELMET, setting.maxDamage(EquipmentType.HELMET.getMaxDamage(18))));
-    public static final Item AMETHYST_CHESTPLATE = registerItem("amethyst_chestplate", setting -> new ArmorItem(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL, EquipmentType.CHESTPLATE, setting.maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(18))));
-    public static final Item AMETHYST_LEGGINGS = registerItem("amethyst_leggings", setting -> new ArmorItem(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL, EquipmentType.LEGGINGS, setting.maxDamage(EquipmentType.LEGGINGS.getMaxDamage(18))));
-    public static final Item AMETHYST_BOOTS = registerItem("amethyst_boots", setting -> new ArmorItem(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL, EquipmentType.BOOTS, setting.maxDamage(EquipmentType.BOOTS.getMaxDamage(18))));
+    public static final Item AMETHYST_HELMET = registerItem("amethyst_helmet", setting -> new Item(setting.armor(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item AMETHYST_CHESTPLATE = registerItem("amethyst_chestplate", setting -> new Item(setting.armor(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item AMETHYST_LEGGINGS = registerItem("amethyst_leggings", setting -> new Item(setting.armor(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item AMETHYST_BOOTS = registerItem("amethyst_boots", setting -> new Item(setting.armor(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-    public static final Item QUARTZ_HELMET = registerItem("quartz_helmet", setting -> new ArmorItem(ModArmorMaterials.QUARTZ_ARMOR_MATERIAL, EquipmentType.HELMET, setting.maxDamage(EquipmentType.HELMET.getMaxDamage(10))));
-    public static final Item QUARTZ_CHESTPLATE = registerItem("quartz_chestplate", setting -> new ArmorItem(ModArmorMaterials.QUARTZ_ARMOR_MATERIAL, EquipmentType.CHESTPLATE, setting.maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(10))));
-    public static final Item QUARTZ_LEGGINGS = registerItem("quartz_leggings", setting -> new ArmorItem(ModArmorMaterials.QUARTZ_ARMOR_MATERIAL, EquipmentType.LEGGINGS, setting.maxDamage(EquipmentType.LEGGINGS.getMaxDamage(10))));
-    public static final Item QUARTZ_BOOTS = registerItem("quartz_boots", setting -> new ArmorItem(ModArmorMaterials.QUARTZ_ARMOR_MATERIAL, EquipmentType.BOOTS, setting.maxDamage(EquipmentType.BOOTS.getMaxDamage(10))));
+    public static final Item QUARTZ_HELMET = registerItem("quartz_helmet", setting -> new Item(setting.armor(ModArmorMaterials.QUARTZ_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item QUARTZ_CHESTPLATE = registerItem("quartz_chestplate", setting -> new Item(setting.armor(ModArmorMaterials.QUARTZ_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item QUARTZ_LEGGINGS = registerItem("quartz_leggings", setting -> new Item(setting.armor(ModArmorMaterials.QUARTZ_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item QUARTZ_BOOTS = registerItem("quartz_boots", setting -> new Item(setting.armor(ModArmorMaterials.QUARTZ_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-    public static final Item RUBY_HORSE_ARMOR = registerItem("ruby_horse_armor", setting -> new AnimalArmorItem(ModArmorMaterials.RUBY_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, setting.maxCount(1)));
-    public static final Item SAPPHIRE_HORSE_ARMOR = registerItem("sapphire_horse_armor", setting -> new AnimalArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, setting.maxCount(1)));
-    public static final Item EMERALD_HORSE_ARMOR = registerItem("emerald_horse_armor", setting -> new AnimalArmorItem(ModArmorMaterials.EMERALD_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, setting.maxCount(1)));
-    public static final Item TOPAZ_HORSE_ARMOR = registerItem("topaz_horse_armor", setting -> new AnimalArmorItem(ModArmorMaterials.TOPAZ_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, setting.maxCount(1)));
-    public static final Item AMETHYST_HORSE_ARMOR = registerItem("amethyst_horse_armor", setting -> new AnimalArmorItem(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, setting.maxCount(1)));
-    public static final Item QUARTZ_HORSE_ARMOR = registerItem("quartz_horse_armor", setting -> new AnimalArmorItem(ModArmorMaterials.QUARTZ_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, setting.maxCount(1)));
+    public static final Item RUBY_HORSE_ARMOR = registerItem("ruby_horse_armor", setting -> new Item(setting.horseArmor(ModArmorMaterials.RUBY_ARMOR_MATERIAL)));
+    public static final Item SAPPHIRE_HORSE_ARMOR = registerItem("sapphire_horse_armor", setting -> new Item(setting.horseArmor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL)));
+    public static final Item EMERALD_HORSE_ARMOR = registerItem("emerald_horse_armor", setting -> new Item(setting.horseArmor(ModArmorMaterials.EMERALD_ARMOR_MATERIAL)));
+    public static final Item TOPAZ_HORSE_ARMOR = registerItem("topaz_horse_armor", setting -> new Item(setting.horseArmor(ModArmorMaterials.TOPAZ_ARMOR_MATERIAL)));
+    public static final Item AMETHYST_HORSE_ARMOR = registerItem("amethyst_horse_armor", setting -> new Item(setting.horseArmor(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL)));
+    public static final Item QUARTZ_HORSE_ARMOR = registerItem("quartz_horse_armor", setting -> new Item(setting.horseArmor(ModArmorMaterials.QUARTZ_ARMOR_MATERIAL)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(RUBY);
