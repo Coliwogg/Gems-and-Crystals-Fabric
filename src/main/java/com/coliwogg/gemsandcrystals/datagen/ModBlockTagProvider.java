@@ -15,7 +15,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.RUBY_BLOCK)
                 .add(ModBlocks.RUBY_ORE)
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE)
@@ -30,7 +30,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.QUARTZ_ORE)
                 .add(ModBlocks.DEEPSLATE_QUARTZ_ORE);
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+        valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.RUBY_BLOCK)
                 .add(ModBlocks.RUBY_ORE)
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE)
