@@ -96,6 +96,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DEEPSLATE_AMETHYST_ORE);
                         entries.add(ModBlocks.QUARTZ_ORE);
                         entries.add(ModBlocks.DEEPSLATE_QUARTZ_ORE);
+                        entries.add(ModBlocks.BUDDING_QUARTZ);
+                        entries.add(ModBlocks.SMALL_QUARTZ_BUD);
+                        entries.add(ModBlocks.MEDIUM_QUARTZ_BUD);
+                        entries.add(ModBlocks.LARGE_QUARTZ_BUD);
+                        entries.add(ModBlocks.QUARTZ_CLUSTER);
+
                     }).build());
 
     public static void registerItemGroups() {

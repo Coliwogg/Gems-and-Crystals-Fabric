@@ -1,3 +1,4 @@
 // 1.21.11	-999999999-01-01T00:00:00	Gems and Crystals/Tags for minecraft:block
-c0dd3dd070f4eec9809f74c9ae78a131672d0879 data/minecraft/tags/block/mineable/pickaxe.json
-c0dd3dd070f4eec9809f74c9ae78a131672d0879 data/minecraft/tags/block/needs_iron_tool.json
+6a44dbd2e371504cbcf6d9f891cb81c570ba48b0 data/minecraft/tags/block/mineable/pickaxe.json
+cd33d452127ec0392d66d25dc6059e91ca359275 data/minecraft/tags/block/needs_diamond_tool.json
+7a6970218f70d668a9010c5e1f7416671f7fded7 data/minecraft/tags/block/needs_iron_tool.json

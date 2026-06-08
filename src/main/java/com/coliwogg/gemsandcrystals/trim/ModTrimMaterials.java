@@ -16,8 +16,6 @@ import net.minecraft.text.TextColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 
-import java.util.Map;
-
 public class ModTrimMaterials {
     public static final RegistryKey<ArmorTrimMaterial> RUBY = RegistryKey.of(RegistryKeys.TRIM_MATERIAL, Identifier.of(GemsAndCrystals.MOD_ID, "ruby"));
     public static final RegistryKey<ArmorTrimMaterial> SAPPHIRE = RegistryKey.of(RegistryKeys.TRIM_MATERIAL, Identifier.of(GemsAndCrystals.MOD_ID, "sapphire"));
