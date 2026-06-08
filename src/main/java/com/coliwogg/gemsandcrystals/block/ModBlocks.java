@@ -1,9 +1,9 @@
 package com.coliwogg.gemsandcrystals.block;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
+import com.coliwogg.gemsandcrystals.block.custom.BuddingQuartzBlock;
+import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -105,6 +105,37 @@ public class ModBlocks {
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(GemsAndCrystals.MOD_ID, "deepslate_quartz_ore")))
                     .strength(4.5f)
                     .requiresTool()));
+
+    public static final Block BUDDING_QUARTZ = registerBlock("budding_quartz", new BuddingQuartzBlock(
+            AbstractBlock.Settings.create()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(GemsAndCrystals.MOD_ID, "budding_quartz")))
+                    .mapColor(MapColor.OFF_WHITE).ticksRandomly().strength(1.5F)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool().pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block QUARTZ_CLUSTER = registerBlock("quartz_cluster", new AmethystClusterBlock(7.0F, 10.0F,
+            AbstractBlock.Settings.create()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(GemsAndCrystals.MOD_ID, "quartz_cluster")))
+                    .mapColor(MapColor.OFF_WHITE).solid().nonOpaque().sounds(BlockSoundGroup.AMETHYST_CLUSTER)
+                    .strength(1.5F).luminance((state) -> 5)));
+
+    public static final Block LARGE_QUARTZ_BUD = registerBlock("large_quartz_bud", new AmethystClusterBlock(5.0F, 10.0F,
+            AbstractBlock.Settings.create()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(GemsAndCrystals.MOD_ID, "large_quartz_bud")))
+                    .mapColor(MapColor.OFF_WHITE).solid().nonOpaque().sounds(BlockSoundGroup.LARGE_AMETHYST_BUD)
+                    .strength(1.5F).luminance((state) -> 4)));
+
+    public static final Block MEDIUM_QUARTZ_BUD = registerBlock("medium_quartz_bud", new AmethystClusterBlock(4.0F, 10.0F,
+            AbstractBlock.Settings.create()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(GemsAndCrystals.MOD_ID, "medium_quartz_bud")))
+                    .mapColor(MapColor.OFF_WHITE).solid().nonOpaque().sounds(BlockSoundGroup.MEDIUM_AMETHYST_BUD)
+                    .strength(1.5F).luminance((state) -> 2)));
+
+    public static final Block SMALL_QUARTZ_BUD = registerBlock("small_quartz_bud", new AmethystClusterBlock(3.0F, 8.0F,
+            AbstractBlock.Settings.create()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(GemsAndCrystals.MOD_ID, "small_quartz_bud")))
+                    .mapColor(MapColor.OFF_WHITE).solid().nonOpaque().sounds(BlockSoundGroup.SMALL_AMETHYST_BUD)
+                    .strength(1.5F).luminance((state) -> 1)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(GemsAndCrystals.MOD_ID, name), block);

@@ -28,22 +28,29 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.AMETHYST_ORE)
                 .add(ModBlocks.DEEPSLATE_AMETHYST_ORE)
                 .add(ModBlocks.QUARTZ_ORE)
-                .add(ModBlocks.DEEPSLATE_QUARTZ_ORE);
+                .add(ModBlocks.DEEPSLATE_QUARTZ_ORE)
+                .add(ModBlocks.BUDDING_QUARTZ)
+                .add(ModBlocks.QUARTZ_CLUSTER)
+                .add(ModBlocks.LARGE_QUARTZ_BUD)
+                .add(ModBlocks.MEDIUM_QUARTZ_BUD)
+                .add(ModBlocks.SMALL_QUARTZ_BUD);
 
-        valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
+        valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.RUBY_BLOCK)
                 .add(ModBlocks.RUBY_ORE)
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE)
                 .add(ModBlocks.SAPPHIRE_BLOCK)
                 .add(ModBlocks.SAPPHIRE_ORE)
-                .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE)
+                .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
+
+        valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.TOPAZ_BLOCK)
                 .add(ModBlocks.TOPAZ_ORE)
                 .add(ModBlocks.DEEPSLATE_TOPAZ_ORE)
                 .add(ModBlocks.AMETHYST_ORE)
                 .add(ModBlocks.DEEPSLATE_AMETHYST_ORE)
                 .add(ModBlocks.QUARTZ_ORE)
-                .add(ModBlocks.DEEPSLATE_QUARTZ_ORE);
-
+                .add(ModBlocks.DEEPSLATE_QUARTZ_ORE)
+                .add(ModBlocks.BUDDING_QUARTZ);
     }
 }

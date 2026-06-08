@@ -3,13 +3,26 @@ package com.coliwogg.gemsandcrystals.datagen;
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
 import com.coliwogg.gemsandcrystals.item.ModArmorMaterials;
 import com.coliwogg.gemsandcrystals.item.ModItems;
+import com.google.gson.JsonObject;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
+import net.minecraft.block.Block;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
 public class ModModelProvider extends FabricModelProvider {
+    private static final BlockStateVariantMap<ModelVariantOperator> UP_DEFAULT_ROTATION_OPERATIONS = BlockStateVariantMap.operations(Properties.FACING)
+            .register(Direction.DOWN, BlockStateModelGenerator.ROTATE_X_180)
+            .register(Direction.UP, BlockStateModelGenerator.NO_OP)
+            .register(Direction.NORTH, BlockStateModelGenerator.ROTATE_X_90)
+            .register(Direction.SOUTH, BlockStateModelGenerator.ROTATE_X_90.then(BlockStateModelGenerator.ROTATE_Y_180))
+            .register(Direction.WEST, BlockStateModelGenerator.ROTATE_X_90.then(BlockStateModelGenerator.ROTATE_Y_270))
+            .register(Direction.EAST, BlockStateModelGenerator.ROTATE_X_90.then(BlockStateModelGenerator.ROTATE_Y_90));
+
     public ModModelProvider(FabricDataOutput output) {
         super(output);
     }
@@ -29,6 +42,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_AMETHYST_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUARTZ_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_QUARTZ_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BUDDING_QUARTZ);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.QUARTZ_CLUSTER);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.LARGE_QUARTZ_BUD);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.MEDIUM_QUARTZ_BUD);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.SMALL_QUARTZ_BUD);
     }
 
     @Override
@@ -97,6 +115,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(ModItems.QUARTZ_CHESTPLATE, ModArmorMaterials.QUARTZ_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.QUARTZ_LEGGINGS, ModArmorMaterials.QUARTZ_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.QUARTZ_BOOTS, ModArmorMaterials.QUARTZ_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+
+        itemModelGenerator.register(ModBlocks.QUARTZ_CLUSTER.asItem());
+        itemModelGenerator.register(ModBlocks.LARGE_QUARTZ_BUD.asItem());
+        itemModelGenerator.register(ModBlocks.MEDIUM_QUARTZ_BUD.asItem());
+        itemModelGenerator.register(ModBlocks.SMALL_QUARTZ_BUD.asItem());
+
         itemModelGenerator.register(ModItems.RUBY_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.SAPPHIRE_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.EMERALD_HORSE_ARMOR, Models.GENERATED);
