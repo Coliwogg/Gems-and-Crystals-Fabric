@@ -6,100 +6,122 @@
 
 ## Adds new gems, crystals, ores, tools, armor, and world generation to Minecraft.
 
-Gems and Crystals expands Minecraft progression by introducing new materials that fit naturally alongside vanilla equipment tiers while encouraging biome exploration.
+Gems and Crystals expands Minecraft’s progression with new materials, biome‑based ore generation, quartz growth mechanics, and complete equipment sets that integrate naturally with vanilla gameplay.
 
-## New Materials
+---
 
-The following gems and crystals are added:
+## **New Materials**
 
-- Rubies
-- Sapphires
-- Topaz
-- Emerald Equipment Expansion
-- Amethyst *(prior to 1.17 progression)*
-- Quartz *(Overworld variant)*
+This mod introduces several new gem‑based materials and expands existing ones:
+
+- Ruby  
+- Sapphire  
+- Topaz  
+- Emerald Equipment Expansion  
+- Amethyst *(pre‑1.17 progression)*  
+- Quartz *(Overworld variant with growth blocks)*  
+
+Each material includes items, blocks, and worldgen tuned to fit Minecraft’s natural progression.
 
 ![Ruby, Sapphire, Emerald, Topaz, Amethyst, Quartz](https://i.imgur.com/Qu7hVMt.png)
 
-## New Equipment
+## **New Equipment**
 
-Each material includes full equipment sets:
+### Tools  
+- Ruby Tools  
+- Sapphire Tools  
+- Emerald Tools  
+- Topaz Tools  
+- Amethyst Tools  
+- Quartz Tools  
 
-### Tools
-- Ruby Tools
-- Sapphire Tools
-- Emerald Tools
-- Topaz Tools
-- Amethyst Tools
-- Quartz Tools
+### Armor  
+- Ruby Armor  
+- Sapphire Armor  
+- Emerald Armor  
+- Topaz Armor  
+- Amethyst Armor  
+- Quartz Armor  
 
-### Armor
-- Ruby Armor
-- Sapphire Armor
-- Emerald Armor
-- Topaz Armor
-- Amethyst Armor
-- Quartz Armor
-
-### Horse Armor
-- Ruby Horse Armor
-- Sapphire Horse Armor
-- Emerald Horse Armor
-- Topaz Horse Armor
-- Amethyst Horse Armor
-- Quartz Horse Armor
+### Horse Armor  
+- Ruby Horse Armor  
+- Sapphire Horse Armor  
+- Emerald Horse Armor  
+- Topaz Horse Armor  
+- Amethyst Horse Armor  
+- Quartz Horse Armor  
 
 ![Ruby Armor, Sapphire Armor, Emerald Armor, Topaz Armor, Amethyst Armor, Quartz Armor](https://i.imgur.com/IhYKxNr.png)
 
-## World Generation
+## **Quartz Growth Blocks (New in 1.5.0)**
 
-New ores generate naturally throughout the world with biome-specific spawning:
+Quartz now features a full growth system similar to amethyst:
 
-### Ruby
-- Found across most overworld biomes
-- Rare, deep underground generation
-- Strong late game material
+- Budding Quartz  
+- Small Quartz Bud  
+- Medium Quartz Bud  
+- Large Quartz Bud  
+- Quartz Cluster  
 
-### Sapphire
-- Primarily found in cold and snowy biomes
-- More common in frozen regions and mountain ranges
+These blocks generate naturally inside **Quartz Geodes** and can be harvested like normal blocks.
 
-### Topaz
-- Found in warm climates
-- Spawns in deserts, savannas, badlands, meadows, and warmer oceans
-- Generates higher than most ores, with some deeper generation
+---
 
-### Amethyst Ore
-- Generates underground in cave-heavy and darker environments
-- More common in Deep Dark and cave biomes
+## **World Generation**
 
-### Quartz Ore
-- Naturally generates in the Overworld
-- More common in mountainous environments
-- Includes custom Quartz Geodes
+All ores generate using updated Fabric worldgen with **biome‑specific distribution** and **small/large ore variants**.
 
-### Quartz Geodes
-- Generate underground similarly to vanilla geodes
-- Contain quartz themed blocks and ore formations
+### Ruby  
+- Generates in most overworld biomes  
+- Rare, deep‑underground ore  
+- High‑tier material  
+
+### Sapphire  
+- Found mainly in cold and snowy biomes  
+- More common in frozen peaks and mountain ranges  
+
+### Topaz  
+- Spawns in warm biomes: deserts, savannas, badlands, meadows, warm oceans  
+- Generates higher in the world, with some deeper pockets  
+
+### Amethyst Ore  
+- Appears in cave‑dense and darker biomes  
+- More common in Deep Dark and underground cave systems  
+
+### Quartz Ore  
+- Overworld variant of quartz  
+- More common in mountainous terrain  
+
+### Quartz Geodes  
+- Generate similarly to vanilla amethyst geodes  
+- Contain **Budding Quartz**, **Quartz Buds**, and **Quartz Clusters**  
+- Provide renewable quartz growth blocks  
+- Decorative, thematic underground structures  
 
 ![Ruby Ore, Sapphire Ore, Topaz Ore, Amethyst Ore, Quartz Ore](https://i.imgur.com/x73jiQ5.png)
 
-## Equipment Progression
+---
 
-Equipment tiers are designed to complement vanilla progression rather than replace it.
+## **Equipment Progression**
+
+Each material is designed to complement vanilla progression:
 
 | Material | Relative Tier | Notes |
 |----------|----------|----------|
-| Quartz | Below Iron | Early game alternative |
-| Amethyst | Around Iron | Faster progression option |
-| Topaz | Between Iron and Diamond | Mid game upgrade |
-| Emerald | Between Diamond and Iron | Strong utility tier |
-| Sapphire | Near Diamond+ | Rare biome-focused tier |
-| Ruby | Diamond+ | End-game gem equipment |
+| Quartz | Below Iron | Early‑game alternative |
+| Amethyst | Around Iron | Faster early progression |
+| Topaz | Between Iron and Diamond | Mid‑game upgrade |
+| Emerald | Between Diamond and Iron | Utility‑focused tier |
+| Sapphire | Near Diamond+ | Biome‑specific rarity |
+| Ruby | Diamond+ | High‑end gem tier |
 
-### Design Philosophy
+---
 
-- Vanilla progression remains relevant
-- Biome exploration rewards players with unique materials
-- Each material provides tradeoffs instead of direct upgrades
-- Multiple viable progression paths
+## **Design Philosophy**
+
+- Vanilla progression remains central  
+- Biome exploration is rewarded  
+- Each material offers tradeoffs, not strict upgrades  
+- Multiple viable progression paths  
+
+---
