@@ -48,36 +48,42 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.TOPAZ, RecipeCategory.DECORATIONS, ModBlocks.TOPAZ_BLOCK);
                 offerShapelessRecipe(Items.QUARTZ, Blocks.QUARTZ_BLOCK, "quartz", 4);
 
-                offerSwordRecipe(exporter, ModItems.RUBY_SWORD, ModItems.RUBY);
-                offerShovelRecipe(exporter, ModItems.RUBY_SHOVEL, ModItems.RUBY);
-                offerPickaxeRecipe(exporter, ModItems.RUBY_PICKAXE, ModItems.RUBY);
-                offerAxeRecipe(exporter, ModItems.RUBY_AXE, ModItems.RUBY);
-                offerHoeRecipe(exporter, ModItems.RUBY_HOE, ModItems.RUBY);
-                offerSwordRecipe(exporter, ModItems.SAPPHIRE_SWORD, ModItems.SAPPHIRE);
-                offerShovelRecipe(exporter, ModItems.SAPPHIRE_SHOVEL, ModItems.SAPPHIRE);
-                offerPickaxeRecipe(exporter, ModItems.SAPPHIRE_PICKAXE, ModItems.SAPPHIRE);
-                offerAxeRecipe(exporter, ModItems.SAPPHIRE_AXE, ModItems.SAPPHIRE);
-                offerHoeRecipe(exporter, ModItems.SAPPHIRE_HOE, ModItems.SAPPHIRE);
-                offerSwordRecipe(exporter, ModItems.EMERALD_SWORD, Items.EMERALD);
-                offerShovelRecipe(exporter, ModItems.EMERALD_SHOVEL, Items.EMERALD);
-                offerPickaxeRecipe(exporter, ModItems.EMERALD_PICKAXE, Items.EMERALD);
-                offerAxeRecipe(exporter, ModItems.EMERALD_AXE, Items.EMERALD);
-                offerHoeRecipe(exporter, ModItems.EMERALD_HOE, Items.EMERALD);
-                offerSwordRecipe(exporter, ModItems.TOPAZ_SWORD, ModItems.TOPAZ);
-                offerShovelRecipe(exporter, ModItems.TOPAZ_SHOVEL, ModItems.TOPAZ);
-                offerPickaxeRecipe(exporter, ModItems.TOPAZ_PICKAXE, ModItems.TOPAZ);
-                offerAxeRecipe(exporter, ModItems.TOPAZ_AXE, ModItems.TOPAZ);
-                offerHoeRecipe(exporter, ModItems.TOPAZ_HOE, ModItems.TOPAZ);
-                offerSwordRecipe(exporter, ModItems.AMETHYST_SWORD, Items.AMETHYST_SHARD);
-                offerShovelRecipe(exporter, ModItems.AMETHYST_SHOVEL, Items.AMETHYST_SHARD);
-                offerPickaxeRecipe(exporter, ModItems.AMETHYST_PICKAXE, Items.AMETHYST_SHARD);
-                offerAxeRecipe(exporter, ModItems.AMETHYST_AXE, Items.AMETHYST_SHARD);
-                offerHoeRecipe(exporter, ModItems.AMETHYST_HOE, Items.AMETHYST_SHARD);
-                offerSwordRecipe(exporter, ModItems.QUARTZ_SWORD, Items.QUARTZ);
-                offerShovelRecipe(exporter, ModItems.QUARTZ_SHOVEL, Items.QUARTZ);
-                offerPickaxeRecipe(exporter, ModItems.QUARTZ_PICKAXE, Items.QUARTZ);
-                offerAxeRecipe(exporter, ModItems.QUARTZ_AXE, Items.QUARTZ);
-                offerHoeRecipe(exporter, ModItems.QUARTZ_HOE, Items.QUARTZ);
+                offerSwordRecipe(exporter, ModItems.RUBY_SWORD, ModItems.RUBY, "ruby");
+                offerShovelRecipe(exporter, ModItems.RUBY_SHOVEL, ModItems.RUBY, "ruby");
+                offerPickaxeRecipe(exporter, ModItems.RUBY_PICKAXE, ModItems.RUBY, "ruby");
+                offerAxeRecipe(exporter, ModItems.RUBY_AXE, ModItems.RUBY, "ruby");
+                offerHoeRecipe(exporter, ModItems.RUBY_HOE, ModItems.RUBY, "ruby");
+                offerSpearRecipe(exporter, ModItems.RUBY_SPEAR, ModItems.RUBY, "ruby");
+                offerSwordRecipe(exporter, ModItems.SAPPHIRE_SWORD, ModItems.SAPPHIRE, "sapphire");
+                offerShovelRecipe(exporter, ModItems.SAPPHIRE_SHOVEL, ModItems.SAPPHIRE, "sapphire");
+                offerPickaxeRecipe(exporter, ModItems.SAPPHIRE_PICKAXE, ModItems.SAPPHIRE, "sapphire");
+                offerAxeRecipe(exporter, ModItems.SAPPHIRE_AXE, ModItems.SAPPHIRE, "sapphire");
+                offerHoeRecipe(exporter, ModItems.SAPPHIRE_HOE, ModItems.SAPPHIRE, "sapphire");
+                offerSpearRecipe(exporter, ModItems.SAPPHIRE_SPEAR, ModItems.RUBY, "sapphire");
+                offerSwordRecipe(exporter, ModItems.EMERALD_SWORD, Items.EMERALD, "emerald");
+                offerShovelRecipe(exporter, ModItems.EMERALD_SHOVEL, Items.EMERALD, "emerald");
+                offerPickaxeRecipe(exporter, ModItems.EMERALD_PICKAXE, Items.EMERALD, "emerald");
+                offerAxeRecipe(exporter, ModItems.EMERALD_AXE, Items.EMERALD, "emerald");
+                offerHoeRecipe(exporter, ModItems.EMERALD_HOE, Items.EMERALD, "emerald");
+                offerSpearRecipe(exporter, ModItems.EMERALD_SPEAR, Items.EMERALD, "emerald");
+                offerSwordRecipe(exporter, ModItems.TOPAZ_SWORD, ModItems.TOPAZ, "topaz");
+                offerShovelRecipe(exporter, ModItems.TOPAZ_SHOVEL, ModItems.TOPAZ, "topaz");
+                offerPickaxeRecipe(exporter, ModItems.TOPAZ_PICKAXE, ModItems.TOPAZ, "topaz");
+                offerAxeRecipe(exporter, ModItems.TOPAZ_AXE, ModItems.TOPAZ, "topaz");
+                offerHoeRecipe(exporter, ModItems.TOPAZ_HOE, ModItems.TOPAZ, "topaz");
+                offerSpearRecipe(exporter, ModItems.TOPAZ_SPEAR, ModItems.TOPAZ, "topaz");
+                offerSwordRecipe(exporter, ModItems.AMETHYST_SWORD, Items.AMETHYST_SHARD, "amethyst");
+                offerShovelRecipe(exporter, ModItems.AMETHYST_SHOVEL, Items.AMETHYST_SHARD, "amethyst");
+                offerPickaxeRecipe(exporter, ModItems.AMETHYST_PICKAXE, Items.AMETHYST_SHARD, "amethyst");
+                offerAxeRecipe(exporter, ModItems.AMETHYST_AXE, Items.AMETHYST_SHARD, "amethyst");
+                offerHoeRecipe(exporter, ModItems.AMETHYST_HOE, Items.AMETHYST_SHARD, "amethyst");
+                offerSpearRecipe(exporter, ModItems.AMETHYST_SPEAR, Items.AMETHYST_SHARD, "amethyst");
+                offerSwordRecipe(exporter, ModItems.QUARTZ_SWORD, Items.QUARTZ, "quartz");
+                offerShovelRecipe(exporter, ModItems.QUARTZ_SHOVEL, Items.QUARTZ, "quartz");
+                offerPickaxeRecipe(exporter, ModItems.QUARTZ_PICKAXE, Items.QUARTZ, "quartz");
+                offerAxeRecipe(exporter, ModItems.QUARTZ_AXE, Items.QUARTZ, "quartz");
+                offerHoeRecipe(exporter, ModItems.QUARTZ_HOE, Items.QUARTZ, "quartz");
+                offerSpearRecipe(exporter, ModItems.QUARTZ_SPEAR, Items.QUARTZ, "quartz");
 
                 offerHelmetRecipe(exporter, ModItems.RUBY_HELMET, ModItems.RUBY);
                 offerChestplateRecipe(exporter, ModItems.RUBY_CHESTPLATE, ModItems.RUBY);
@@ -112,7 +118,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerHorseArmorRecipe(exporter, ModItems.QUARTZ_HORSE_ARMOR, Items.QUARTZ);
             }
 
-            void offerAxeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+            void offerAxeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input, String itemGroup) {
                 createShaped(RecipeCategory.TOOLS, output, 1)
                         .pattern("##")
                         .pattern("#|")
@@ -121,10 +127,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('|', Items.STICK)
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                        .group(itemGroup)
                         .offerTo(exporter);
             }
 
-            void offerHoeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+            void offerHoeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input, String itemGroup) {
                 createShaped(RecipeCategory.TOOLS, output, 1)
                         .pattern("##")
                         .pattern(" |")
@@ -133,10 +140,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('|', Items.STICK)
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                        .group(itemGroup)
                         .offerTo(exporter);
             }
 
-            void offerPickaxeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+            void offerPickaxeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input, String itemGroup) {
                 createShaped(RecipeCategory.TOOLS, output, 1)
                         .pattern("###")
                         .pattern(" | ")
@@ -145,10 +153,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('|', Items.STICK)
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                        .group(itemGroup)
                         .offerTo(exporter);
             }
 
-            void offerShovelRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+            void offerShovelRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input, String itemGroup) {
                 createShaped(RecipeCategory.TOOLS, output, 1)
                         .pattern("#")
                         .pattern("|")
@@ -157,10 +166,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('|', Items.STICK)
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                        .group(itemGroup)
                         .offerTo(exporter);
             }
 
-            void offerSwordRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+            void offerSwordRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input, String itemGroup) {
                 createShaped(RecipeCategory.COMBAT, output, 1)
                         .pattern("#")
                         .pattern("#")
@@ -169,6 +179,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('|', Items.STICK)
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                        .group(itemGroup)
+                        .offerTo(exporter);
+            }
+
+            void offerSpearRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input, String itemGroup) {
+                createShaped(RecipeCategory.COMBAT, output, 1)
+                        .pattern("  #")
+                        .pattern(" | ")
+                        .pattern("|  ")
+                        .input('#', input)
+                        .input('|', Items.STICK)
+                        .criterion(hasItem(input), conditionsFromItem(input))
+                        .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                        .group(itemGroup)
                         .offerTo(exporter);
             }
 
