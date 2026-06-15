@@ -1,49 +1,49 @@
 package com.coliwogg.gemsandcrystals.block.custom;
 
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
-import net.minecraft.block.AmethystClusterBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.state.property.Properties;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.material.Fluids;
 
 public class BuddingQuartzBlock extends Block {
     private static final Direction[] DIRECTIONS = Direction.values();
 
-    public BuddingQuartzBlock(Settings settings) {
-        super(settings);
+    public BuddingQuartzBlock(Properties properties) {
+        super(properties);
     }
 
-    protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+    protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (random.nextInt(5) == 0) {
             Direction direction = DIRECTIONS[random.nextInt(DIRECTIONS.length)];
-            BlockPos blockPos = pos.offset(direction);
-            BlockState blockState = world.getBlockState(blockPos);
+            BlockPos targetPos = pos.relative(direction);
+            BlockState targetState = level.getBlockState(targetPos);
+
             Block block = null;
-            if (canGrowIn(blockState)) {
+            if (canGrowInto(targetState)) {
                 block = ModBlocks.SMALL_QUARTZ_BUD;
-            } else if (blockState.isOf(ModBlocks.SMALL_QUARTZ_BUD) && blockState.get(Properties.FACING) == direction) {
+            } else if (targetState.is(ModBlocks.SMALL_QUARTZ_BUD) && targetState.getValue(BlockStateProperties.FACING) == direction) {
                 block = ModBlocks.MEDIUM_QUARTZ_BUD;
-            } else if (blockState.isOf(ModBlocks.MEDIUM_QUARTZ_BUD) && blockState.get(Properties.FACING) == direction) {
+            } else if (targetState.is(ModBlocks.MEDIUM_QUARTZ_BUD) && targetState.getValue(BlockStateProperties.FACING) == direction) {
                 block = ModBlocks.LARGE_QUARTZ_BUD;
-            } else if (blockState.isOf(ModBlocks.LARGE_QUARTZ_BUD) && blockState.get(Properties.FACING) == direction) {
+            } else if (targetState.is(ModBlocks.LARGE_QUARTZ_BUD) && targetState.getValue(BlockStateProperties.FACING) == direction) {
                 block = ModBlocks.QUARTZ_CLUSTER;
             }
 
             if (block != null) {
-                BlockState newState = block.getDefaultState().with(Properties.FACING, direction).with(Properties.WATERLOGGED, blockState.getFluidState().getFluid() == Fluids.WATER);
-                world.setBlockState(blockPos, newState);
+                BlockState newState = block.defaultBlockState().setValue(BlockStateProperties.FACING, direction).setValue(BlockStateProperties.WATERLOGGED, targetState.getFluidState().getType() == Fluids.WATER);
+                level.setBlockAndUpdate(targetPos, newState);
             }
 
         }
     }
 
-    public static boolean canGrowIn(BlockState state) {
-        return state.isAir() || state.isOf(Blocks.WATER) && state.getFluidState().getLevel() == 8;
+    private boolean canGrowInto(BlockState state) {
+        return state.isAir() || (state.is(Blocks.WATER) && state.getFluidState().getAmount() == 8);
     }
 }

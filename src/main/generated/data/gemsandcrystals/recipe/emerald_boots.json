@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
+  "group": "emerald",
   "key": {
     "#": "minecraft:emerald"
   },
@@ -9,7 +10,6 @@
     "# #"
   ],
   "result": {
-    "count": 1,
     "id": "gemsandcrystals:emerald_boots"
   }
 }

@@ -1,7 +1,7 @@
 package com.coliwogg.gemsandcrystals;
 
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
-import com.coliwogg.gemsandcrystals.item.ModItemGroups;
+import com.coliwogg.gemsandcrystals.creativemodetab.ModCreativeModeTabs;
 import com.coliwogg.gemsandcrystals.item.ModItems;
 import com.coliwogg.gemsandcrystals.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -14,7 +14,7 @@ public class GemsAndCrystals implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItemGroups.registerItemGroups();
+		ModCreativeModeTabs.registerModCreativeModeTabs();
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();

@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
+  "group": "topaz",
   "key": {
     "#": "gemsandcrystals:topaz",
     "X": "minecraft:leather_horse_armor"
@@ -11,7 +12,6 @@
     "#X#"
   ],
   "result": {
-    "count": 1,
     "id": "gemsandcrystals:topaz_horse_armor"
   }
 }

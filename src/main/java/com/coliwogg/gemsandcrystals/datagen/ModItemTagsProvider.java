@@ -1,21 +1,20 @@
 package com.coliwogg.gemsandcrystals.datagen;
 
 import com.coliwogg.gemsandcrystals.item.ModItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.item.Item;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.ItemTags;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider  {
-    public ModItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
-        super(output, completableFuture);
+public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
+    public ModItemTagsProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
+        super(output, registryLookupFuture);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup arg) {
+    protected void addTags(HolderLookup.Provider registries) {
         valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.RUBY_HELMET, ModItems.RUBY_CHESTPLATE, ModItems.RUBY_LEGGINGS, ModItems.RUBY_BOOTS,
                         ModItems.SAPPHIRE_HELMET, ModItems.SAPPHIRE_CHESTPLATE, ModItems.SAPPHIRE_LEGGINGS, ModItems.SAPPHIRE_BOOTS,
@@ -71,7 +70,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider  {
                 .add(ModItems.TOPAZ_SPEAR)
                 .add(ModItems.AMETHYST_SPEAR)
                 .add(ModItems.QUARTZ_SPEAR);
-        
+
         valueLookupBuilder(ItemTags.HEAD_ARMOR)
                 .add(ModItems.RUBY_HELMET,
                         ModItems.SAPPHIRE_HELMET,
