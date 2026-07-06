@@ -64,7 +64,6 @@ public class ModConfiguredFeatures {
         register(context, OVERWORLD_QUARTZ_ORE_SMALL_KEY, Feature.ORE, new OreConfiguration(overworldQuartzOres, 7));
         register(context, OVERWORLD_QUARTZ_ORE_LARGE_KEY, Feature.ORE, new OreConfiguration(overworldQuartzOres, 12));
 
-
         register(context, OVERWORLD_QUARTZ_GEODE_KEY, Feature.GEODE, new GeodeConfiguration(new GeodeBlockSettings(
                         BlockStateProvider.simple(Blocks.AIR),
                         BlockStateProvider.simple(Blocks.DIORITE),
