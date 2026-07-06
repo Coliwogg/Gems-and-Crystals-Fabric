@@ -2,87 +2,97 @@ package com.coliwogg.gemsandcrystals.world;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
 import com.coliwogg.gemsandcrystals.block.ModBlocks;
-import net.minecraft.block.Blocks;
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.structure.rule.RuleTest;
-import net.minecraft.structure.rule.TagMatchRuleTest;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
-import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.GeodeBlockSettings;
+import net.minecraft.world.level.levelgen.GeodeCrackSettings;
+import net.minecraft.world.level.levelgen.GeodeLayerSettings;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
 
 public class ModConfiguredFeatures {
-    public static final RegistryKey<ConfiguredFeature<?, ?>> RUBY_ORE_SMALL_KEY = registerKey("ruby_ore_small");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> RUBY_ORE_LARGE_KEY = registerKey("ruby_ore_large");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORE_SMALL_KEY = registerKey("sapphire_ore_small");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORE_LARGE_KEY = registerKey("sapphire_ore_large");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> TOPAZ_ORE_SMALL_KEY = registerKey("topaz_ore_small");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> TOPAZ_ORE_LARGE_KEY = registerKey("topaz_ore_large");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> AMETHYST_ORE_SMALL_KEY = registerKey("amethyst_ore_small");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> QUARTZ_ORE_SMALL_KEY = registerKey("quartz_ore_small");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> QUARTZ_ORE_LARGE_KEY = registerKey("quartz_ore_large");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> QUARTZ_GEODE_KEY = registerKey("quartz_geode");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_RUBY_ORE_SMALL_KEY = registerKey("ruby_ore_small");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_RUBY_ORE_LARGE_KEY = registerKey("ruby_ore_large");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_SAPPHIRE_ORE_SMALL_KEY = registerKey("sapphire_ore_small");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_SAPPHIRE_ORE_LARGE_KEY = registerKey("sapphire_ore_large");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_TOPAZ_ORE_SMALL_KEY = registerKey("topaz_ore_small");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_TOPAZ_ORE_LARGE_KEY = registerKey("topaz_ore_large");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_AMETHYST_ORE_SMALL_KEY = registerKey("amethyst_ore_small");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_QUARTZ_ORE_SMALL_KEY = registerKey("quartz_ore_small");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_QUARTZ_ORE_LARGE_KEY = registerKey("quartz_ore_large");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_QUARTZ_GEODE_KEY = registerKey("quartz_geode");
 
-    public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
-        RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
-        RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
+        RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
-        List<OreFeatureConfig.Target> overworldRubyOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.RUBY_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_RUBY_ORE.getDefaultState()));
-        List<OreFeatureConfig.Target> overworldSapphireOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.SAPPHIRE_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_SAPPHIRE_ORE.getDefaultState()));
-        List<OreFeatureConfig.Target> overworldTopazOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.TOPAZ_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_TOPAZ_ORE.getDefaultState()));
-        List<OreFeatureConfig.Target> overworldAmethystOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.AMETHYST_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_AMETHYST_ORE.getDefaultState()));
-        List<OreFeatureConfig.Target> overworldQuartzOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.QUARTZ_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_QUARTZ_ORE.getDefaultState()));
+        List<OreConfiguration.TargetBlockState> overworldRubyOres = List.of(OreConfiguration.target(stoneReplaceables,
+                        ModBlocks.RUBY_ORE.defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_RUBY_ORE.defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> overworldSapphireOres = List.of(OreConfiguration.target(stoneReplaceables,
+                        ModBlocks.SAPPHIRE_ORE.defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_SAPPHIRE_ORE.defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> overworldTopazOres = List.of(OreConfiguration.target(stoneReplaceables,
+                        ModBlocks.TOPAZ_ORE.defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_TOPAZ_ORE.defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> overworldAmethystOres = List.of(OreConfiguration.target(stoneReplaceables,
+                        ModBlocks.AMETHYST_ORE.defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_AMETHYST_ORE.defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> overworldQuartzOres = List.of(OreConfiguration.target(stoneReplaceables,
+                        ModBlocks.QUARTZ_ORE.defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_QUARTZ_ORE.defaultBlockState()));
 
-        register(context, RUBY_ORE_SMALL_KEY, Feature.ORE, new OreFeatureConfig(overworldRubyOres, 4));
-        register(context, RUBY_ORE_LARGE_KEY, Feature.ORE, new OreFeatureConfig(overworldRubyOres, 8));
-        register(context, SAPPHIRE_ORE_SMALL_KEY, Feature.ORE, new OreFeatureConfig(overworldSapphireOres, 5));
-        register(context, SAPPHIRE_ORE_LARGE_KEY, Feature.ORE, new OreFeatureConfig(overworldSapphireOres, 9));
-        register(context, TOPAZ_ORE_SMALL_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazOres, 6));
-        register(context, TOPAZ_ORE_LARGE_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazOres, 11));
-        register(context, AMETHYST_ORE_SMALL_KEY, Feature.ORE, new OreFeatureConfig(overworldAmethystOres, 3));
-        register(context, QUARTZ_ORE_SMALL_KEY, Feature.ORE, new OreFeatureConfig(overworldQuartzOres, 7));
-        register(context, QUARTZ_ORE_LARGE_KEY, Feature.ORE, new OreFeatureConfig(overworldQuartzOres, 12));
-        register(context, QUARTZ_GEODE_KEY, Feature.GEODE, new GeodeFeatureConfig(new GeodeLayerConfig(
-                BlockStateProvider.of(Blocks.AIR),
-                BlockStateProvider.of(Blocks.DIORITE),
-                BlockStateProvider.of(ModBlocks.BUDDING_QUARTZ),
-                BlockStateProvider.of(Blocks.TUFF),
-                BlockStateProvider.of(Blocks.SMOOTH_BASALT),
-                List.of(
-                        ModBlocks.SMALL_QUARTZ_BUD.getDefaultState(),
-                        ModBlocks.MEDIUM_QUARTZ_BUD.getDefaultState(),
-                        ModBlocks.LARGE_QUARTZ_BUD.getDefaultState(),
-                        ModBlocks.QUARTZ_CLUSTER.getDefaultState()
-                ),
-                BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                new GeodeLayerThicknessConfig(1.7d, 2.2d, 3.0d, 4.2d),
-                new GeodeCrackConfig(0.6d, 2.0d, 2),
-                0.4d, 0.083d,
-                true, UniformIntProvider.create(4, 7),
-                UniformIntProvider.create(2, 4), UniformIntProvider.create(1, 2),
-                -16, 16, 0.065d, 1));
+        register(context, OVERWORLD_RUBY_ORE_SMALL_KEY, Feature.ORE, new OreConfiguration(overworldRubyOres, 4));
+        register(context, OVERWORLD_RUBY_ORE_LARGE_KEY, Feature.ORE, new OreConfiguration(overworldRubyOres, 8));
+        register(context, OVERWORLD_SAPPHIRE_ORE_SMALL_KEY, Feature.ORE, new OreConfiguration(overworldSapphireOres, 5));
+        register(context, OVERWORLD_SAPPHIRE_ORE_LARGE_KEY, Feature.ORE, new OreConfiguration(overworldSapphireOres, 9));
+        register(context, OVERWORLD_TOPAZ_ORE_SMALL_KEY, Feature.ORE, new OreConfiguration(overworldTopazOres, 6));
+        register(context, OVERWORLD_TOPAZ_ORE_LARGE_KEY, Feature.ORE, new OreConfiguration(overworldTopazOres, 11));
+        register(context, OVERWORLD_AMETHYST_ORE_SMALL_KEY, Feature.ORE, new OreConfiguration(overworldAmethystOres,3));
+        register(context, OVERWORLD_QUARTZ_ORE_SMALL_KEY, Feature.ORE, new OreConfiguration(overworldQuartzOres, 7));
+        register(context, OVERWORLD_QUARTZ_ORE_LARGE_KEY, Feature.ORE, new OreConfiguration(overworldQuartzOres, 12));
+
+        register(context, OVERWORLD_QUARTZ_GEODE_KEY, Feature.GEODE, new GeodeConfiguration(new GeodeBlockSettings(
+                        BlockStateProvider.simple(Blocks.AIR),
+                        BlockStateProvider.simple(Blocks.DIORITE),
+                        BlockStateProvider.simple(ModBlocks.BUDDING_QUARTZ),
+                        BlockStateProvider.simple(Blocks.TUFF),
+                        BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
+                        List.of(
+                                ModBlocks.SMALL_QUARTZ_BUD.defaultBlockState(),
+                                ModBlocks.MEDIUM_QUARTZ_BUD.defaultBlockState(),
+                                ModBlocks.LARGE_QUARTZ_BUD.defaultBlockState(),
+                                ModBlocks.QUARTZ_CLUSTER.defaultBlockState()
+                        ),
+                        BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
+                        new GeodeLayerSettings(1.7, 2.2, 3.0, 4.2),
+                        new GeodeCrackSettings(0.6, 2.0, 2),
+                        0.4, 0.083,
+                        true, UniformInt.of(4, 7),
+                        UniformInt.of(2, 4), UniformInt.of(1, 2),
+                        -16, 16, 0.065, 1
+                )
+        );
     }
 
-    public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(GemsAndCrystals.MOD_ID, name));
+    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, GemsAndCrystals.identifier(name));
     }
 
-    private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context, RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context,
+                                                                                          ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 }
