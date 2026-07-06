@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
+  "group": "amethyst",
   "key": {
     "#": "minecraft:amethyst_shard"
   },
@@ -9,7 +10,6 @@
     "# #"
   ],
   "result": {
-    "count": 1,
     "id": "gemsandcrystals:amethyst_boots"
   }
 }

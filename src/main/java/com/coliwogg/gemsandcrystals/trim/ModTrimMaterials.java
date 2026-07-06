@@ -2,33 +2,31 @@ package com.coliwogg.gemsandcrystals.trim;
 
 import com.coliwogg.gemsandcrystals.GemsAndCrystals;
 import com.coliwogg.gemsandcrystals.item.ModItems;
-import net.minecraft.item.Item;
-import net.minecraft.item.equipment.trim.ArmorTrimAssets;
-import net.minecraft.item.equipment.trim.ArmorTrimMaterial;
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.text.Style;
-import net.minecraft.text.Text;
-import net.minecraft.text.TextColor;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextColor;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.Util;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.equipment.trim.MaterialAssetGroup;
+import net.minecraft.world.item.equipment.trim.TrimMaterial;
 
 public class ModTrimMaterials {
-    public static final RegistryKey<ArmorTrimMaterial> RUBY = RegistryKey.of(RegistryKeys.TRIM_MATERIAL, Identifier.of(GemsAndCrystals.MOD_ID, "ruby"));
-    public static final RegistryKey<ArmorTrimMaterial> SAPPHIRE = RegistryKey.of(RegistryKeys.TRIM_MATERIAL, Identifier.of(GemsAndCrystals.MOD_ID, "sapphire"));
-    public static final RegistryKey<ArmorTrimMaterial> TOPAZ = RegistryKey.of(RegistryKeys.TRIM_MATERIAL, Identifier.of(GemsAndCrystals.MOD_ID, "topaz"));
+    public static final ResourceKey<TrimMaterial> RUBY = ResourceKey.create(Registries.TRIM_MATERIAL, GemsAndCrystals.identifier("ruby"));
+    public static final ResourceKey<TrimMaterial> SAPPHIRE = ResourceKey.create(Registries.TRIM_MATERIAL, GemsAndCrystals.identifier("sapphire"));
+    public static final ResourceKey<TrimMaterial> TOPAZ = ResourceKey.create(Registries.TRIM_MATERIAL, GemsAndCrystals.identifier("topaz"));
 
-    public static void bootstrap(Registerable<ArmorTrimMaterial> registerable) {
-        register(registerable, RUBY, Registries.ITEM.getEntry(ModItems.RUBY), Style.EMPTY.withColor(TextColor.parse("#f62217").getOrThrow()), "ruby");
-        register(registerable, SAPPHIRE, Registries.ITEM.getEntry(ModItems.SAPPHIRE), Style.EMPTY.withColor(TextColor.parse("#0067bc").getOrThrow()), "sapphire");
-        register(registerable, TOPAZ, Registries.ITEM.getEntry(ModItems.TOPAZ), Style.EMPTY.withColor(TextColor.parse("#f9c032").getOrThrow()), "topaz");
+    public static void bootstrap(BootstrapContext<TrimMaterial> context) {
+        register(context, RUBY, ModItems.RUBY, Style.EMPTY.withColor(TextColor.parseColor("#f62217").getOrThrow()), "ruby");
+        register(context, SAPPHIRE, ModItems.SAPPHIRE, Style.EMPTY.withColor(TextColor.parseColor("#0067bc").getOrThrow()), "sapphire");
+        register(context, TOPAZ, ModItems.TOPAZ, Style.EMPTY.withColor(TextColor.parseColor("#f9c032").getOrThrow()), "topaz");
     }
 
-    private static void register(Registerable<ArmorTrimMaterial> registerable, RegistryKey<ArmorTrimMaterial> armorTrimKey, RegistryEntry<Item> item, Style style, String name) {
-        ArmorTrimMaterial trimMaterial = new ArmorTrimMaterial(ArmorTrimAssets.of(name), Text.translatable(Util.createTranslationKey("trim_material", armorTrimKey.getValue())).fillStyle(style));
-        registerable.register(armorTrimKey, trimMaterial);
+    private static void register(BootstrapContext<TrimMaterial> context, ResourceKey<TrimMaterial> trimKey, Item item, Style style, String name) {
+        TrimMaterial trimmaterial = new TrimMaterial(MaterialAssetGroup.create(name),
+                Component.translatable(Util.makeDescriptionId("trim_material", trimKey.identifier())).withStyle(style));
+        context.register(trimKey, trimmaterial);
     }
 }
