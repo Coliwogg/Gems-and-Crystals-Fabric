@@ -15,97 +15,97 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider registries) {
-        valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.RUBY_HELMET, ModItems.RUBY_CHESTPLATE, ModItems.RUBY_LEGGINGS, ModItems.RUBY_BOOTS,
-                        ModItems.SAPPHIRE_HELMET, ModItems.SAPPHIRE_CHESTPLATE, ModItems.SAPPHIRE_LEGGINGS, ModItems.SAPPHIRE_BOOTS,
-                        ModItems.EMERALD_HELMET, ModItems.EMERALD_CHESTPLATE, ModItems.EMERALD_LEGGINGS, ModItems.EMERALD_BOOTS,
-                        ModItems.TOPAZ_HELMET, ModItems.TOPAZ_CHESTPLATE, ModItems.TOPAZ_LEGGINGS, ModItems.TOPAZ_BOOTS,
-                        ModItems.AMETHYST_HELMET, ModItems.AMETHYST_CHESTPLATE, ModItems.AMETHYST_LEGGINGS, ModItems.AMETHYST_BOOTS,
-                        ModItems.QUARTZ_HELMET, ModItems.QUARTZ_CHESTPLATE, ModItems.QUARTZ_LEGGINGS, ModItems.QUARTZ_BOOTS);
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.getRK(ModItems.RUBY_HELMET), ModItems.getRK(ModItems.RUBY_CHESTPLATE), ModItems.getRK(ModItems.RUBY_LEGGINGS), ModItems.getRK(ModItems.RUBY_BOOTS),
+                        ModItems.getRK(ModItems.SAPPHIRE_HELMET), ModItems.getRK(ModItems.SAPPHIRE_CHESTPLATE), ModItems.getRK(ModItems.SAPPHIRE_LEGGINGS), ModItems.getRK(ModItems.SAPPHIRE_BOOTS),
+                        ModItems.getRK(ModItems.EMERALD_HELMET), ModItems.getRK(ModItems.EMERALD_CHESTPLATE), ModItems.getRK(ModItems.EMERALD_LEGGINGS), ModItems.getRK(ModItems.EMERALD_BOOTS),
+                        ModItems.getRK(ModItems.TOPAZ_HELMET), ModItems.getRK(ModItems.TOPAZ_CHESTPLATE), ModItems.getRK(ModItems.TOPAZ_LEGGINGS), ModItems.getRK(ModItems.TOPAZ_BOOTS),
+                        ModItems.getRK(ModItems.AMETHYST_HELMET), ModItems.getRK(ModItems.AMETHYST_CHESTPLATE), ModItems.getRK(ModItems.AMETHYST_LEGGINGS), ModItems.getRK(ModItems.AMETHYST_BOOTS),
+                        ModItems.getRK(ModItems.QUARTZ_HELMET), ModItems.getRK(ModItems.QUARTZ_CHESTPLATE), ModItems.getRK(ModItems.QUARTZ_LEGGINGS), ModItems.getRK(ModItems.QUARTZ_BOOTS));
 
-        valueLookupBuilder(ItemTags.SWORDS)
-                .add(ModItems.RUBY_SWORD)
-                .add(ModItems.SAPPHIRE_SWORD)
-                .add(ModItems.EMERALD_SWORD)
-                .add(ModItems.TOPAZ_SWORD)
-                .add(ModItems.AMETHYST_SWORD)
-                .add(ModItems.QUARTZ_SWORD);
+        tag(ItemTags.SWORDS)
+                .add(ModItems.getRK(ModItems.RUBY_SWORD))
+                .add(ModItems.getRK(ModItems.SAPPHIRE_SWORD))
+                .add(ModItems.getRK(ModItems.EMERALD_SWORD))
+                .add(ModItems.getRK(ModItems.TOPAZ_SWORD))
+                .add(ModItems.getRK(ModItems.AMETHYST_SWORD))
+                .add(ModItems.getRK(ModItems.QUARTZ_SWORD));
 
-        valueLookupBuilder(ItemTags.PICKAXES)
-                .add(ModItems.RUBY_PICKAXE)
-                .add(ModItems.SAPPHIRE_PICKAXE)
-                .add(ModItems.EMERALD_PICKAXE)
-                .add(ModItems.TOPAZ_PICKAXE)
-                .add(ModItems.AMETHYST_PICKAXE)
-                .add(ModItems.QUARTZ_PICKAXE);
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.getRK(ModItems.RUBY_PICKAXE))
+                .add(ModItems.getRK(ModItems.SAPPHIRE_PICKAXE))
+                .add(ModItems.getRK(ModItems.EMERALD_PICKAXE))
+                .add(ModItems.getRK(ModItems.TOPAZ_PICKAXE))
+                .add(ModItems.getRK(ModItems.AMETHYST_PICKAXE))
+                .add(ModItems.getRK(ModItems.QUARTZ_PICKAXE));
 
-        valueLookupBuilder(ItemTags.SHOVELS)
-                .add(ModItems.RUBY_SHOVEL)
-                .add(ModItems.SAPPHIRE_SHOVEL)
-                .add(ModItems.EMERALD_SHOVEL)
-                .add(ModItems.TOPAZ_SHOVEL)
-                .add(ModItems.AMETHYST_SHOVEL)
-                .add(ModItems.QUARTZ_SHOVEL);
+        tag(ItemTags.SHOVELS)
+                .add(ModItems.getRK(ModItems.RUBY_SHOVEL))
+                .add(ModItems.getRK(ModItems.SAPPHIRE_SHOVEL))
+                .add(ModItems.getRK(ModItems.EMERALD_SHOVEL))
+                .add(ModItems.getRK(ModItems.TOPAZ_SHOVEL))
+                .add(ModItems.getRK(ModItems.AMETHYST_SHOVEL))
+                .add(ModItems.getRK(ModItems.QUARTZ_SHOVEL));
 
-        valueLookupBuilder(ItemTags.AXES)
-                .add(ModItems.RUBY_AXE)
-                .add(ModItems.SAPPHIRE_AXE)
-                .add(ModItems.EMERALD_AXE)
-                .add(ModItems.TOPAZ_AXE)
-                .add(ModItems.AMETHYST_AXE)
-                .add(ModItems.QUARTZ_AXE);
+        tag(ItemTags.AXES)
+                .add(ModItems.getRK(ModItems.RUBY_AXE))
+                .add(ModItems.getRK(ModItems.SAPPHIRE_AXE))
+                .add(ModItems.getRK(ModItems.EMERALD_AXE))
+                .add(ModItems.getRK(ModItems.TOPAZ_AXE))
+                .add(ModItems.getRK(ModItems.AMETHYST_AXE))
+                .add(ModItems.getRK(ModItems.QUARTZ_AXE));
 
-        valueLookupBuilder(ItemTags.HOES)
-                .add(ModItems.RUBY_HOE)
-                .add(ModItems.SAPPHIRE_HOE)
-                .add(ModItems.EMERALD_HOE)
-                .add(ModItems.TOPAZ_HOE)
-                .add(ModItems.AMETHYST_HOE)
-                .add(ModItems.QUARTZ_HOE);
+        tag(ItemTags.HOES)
+                .add(ModItems.getRK(ModItems.RUBY_HOE))
+                .add(ModItems.getRK(ModItems.SAPPHIRE_HOE))
+                .add(ModItems.getRK(ModItems.EMERALD_HOE))
+                .add(ModItems.getRK(ModItems.TOPAZ_HOE))
+                .add(ModItems.getRK(ModItems.AMETHYST_HOE))
+                .add(ModItems.getRK(ModItems.QUARTZ_HOE));
 
-        valueLookupBuilder(ItemTags.SPEARS)
-                .add(ModItems.RUBY_SPEAR)
-                .add(ModItems.SAPPHIRE_SPEAR)
-                .add(ModItems.EMERALD_SPEAR)
-                .add(ModItems.TOPAZ_SPEAR)
-                .add(ModItems.AMETHYST_SPEAR)
-                .add(ModItems.QUARTZ_SPEAR);
+        tag(ItemTags.SPEARS)
+                .add(ModItems.getRK(ModItems.RUBY_SPEAR))
+                .add(ModItems.getRK(ModItems.SAPPHIRE_SPEAR))
+                .add(ModItems.getRK(ModItems.EMERALD_SPEAR))
+                .add(ModItems.getRK(ModItems.TOPAZ_SPEAR))
+                .add(ModItems.getRK(ModItems.AMETHYST_SPEAR))
+                .add(ModItems.getRK(ModItems.QUARTZ_SPEAR));
 
-        valueLookupBuilder(ItemTags.HEAD_ARMOR)
-                .add(ModItems.RUBY_HELMET,
-                        ModItems.SAPPHIRE_HELMET,
-                        ModItems.EMERALD_HELMET,
-                        ModItems.TOPAZ_HELMET,
-                        ModItems.AMETHYST_HELMET,
-                        ModItems.QUARTZ_HELMET);
+        tag(ItemTags.HEAD_ARMOR)
+                .add(ModItems.getRK(ModItems.RUBY_HELMET),
+                        ModItems.getRK(ModItems.SAPPHIRE_HELMET),
+                        ModItems.getRK(ModItems.EMERALD_HELMET),
+                        ModItems.getRK(ModItems.TOPAZ_HELMET),
+                        ModItems.getRK(ModItems.AMETHYST_HELMET),
+                        ModItems.getRK(ModItems.QUARTZ_HELMET));
 
-        valueLookupBuilder(ItemTags.CHEST_ARMOR)
-                .add(ModItems.RUBY_CHESTPLATE,
-                        ModItems.SAPPHIRE_CHESTPLATE,
-                        ModItems.EMERALD_CHESTPLATE,
-                        ModItems.TOPAZ_CHESTPLATE,
-                        ModItems.AMETHYST_CHESTPLATE,
-                        ModItems.QUARTZ_CHESTPLATE);
+        tag(ItemTags.CHEST_ARMOR)
+                .add(ModItems.getRK(ModItems.RUBY_CHESTPLATE),
+                        ModItems.getRK(ModItems.SAPPHIRE_CHESTPLATE),
+                        ModItems.getRK(ModItems.EMERALD_CHESTPLATE),
+                        ModItems.getRK(ModItems.TOPAZ_CHESTPLATE),
+                        ModItems.getRK(ModItems.AMETHYST_CHESTPLATE),
+                        ModItems.getRK(ModItems.QUARTZ_CHESTPLATE));
 
-        valueLookupBuilder(ItemTags.LEG_ARMOR)
-                .add(ModItems.RUBY_LEGGINGS,
-                        ModItems.SAPPHIRE_LEGGINGS,
-                        ModItems.EMERALD_LEGGINGS,
-                        ModItems.TOPAZ_LEGGINGS,
-                        ModItems.AMETHYST_LEGGINGS,
-                        ModItems.QUARTZ_LEGGINGS);
+        tag(ItemTags.LEG_ARMOR)
+                .add(ModItems.getRK(ModItems.RUBY_LEGGINGS),
+                        ModItems.getRK(ModItems.SAPPHIRE_LEGGINGS),
+                        ModItems.getRK(ModItems.EMERALD_LEGGINGS),
+                        ModItems.getRK(ModItems.TOPAZ_LEGGINGS),
+                        ModItems.getRK(ModItems.AMETHYST_LEGGINGS),
+                        ModItems.getRK(ModItems.QUARTZ_LEGGINGS));
 
-        valueLookupBuilder(ItemTags.FOOT_ARMOR)
-                .add(ModItems.RUBY_BOOTS,
-                        ModItems.SAPPHIRE_BOOTS,
-                        ModItems.EMERALD_BOOTS,
-                        ModItems.TOPAZ_BOOTS,
-                        ModItems.AMETHYST_BOOTS,
-                        ModItems.QUARTZ_BOOTS);
+        tag(ItemTags.FOOT_ARMOR)
+                .add(ModItems.getRK(ModItems.RUBY_BOOTS),
+                        ModItems.getRK(ModItems.SAPPHIRE_BOOTS),
+                        ModItems.getRK(ModItems.EMERALD_BOOTS),
+                        ModItems.getRK(ModItems.TOPAZ_BOOTS),
+                        ModItems.getRK(ModItems.AMETHYST_BOOTS),
+                        ModItems.getRK(ModItems.QUARTZ_BOOTS));
 
-        valueLookupBuilder(ItemTags.TRIM_MATERIALS)
-                .add(ModItems.RUBY)
-                .add(ModItems.SAPPHIRE)
-                .add(ModItems.TOPAZ);
+        tag(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.getRK(ModItems.RUBY))
+                .add(ModItems.getRK(ModItems.SAPPHIRE))
+                .add(ModItems.getRK(ModItems.TOPAZ));
     }
 }
