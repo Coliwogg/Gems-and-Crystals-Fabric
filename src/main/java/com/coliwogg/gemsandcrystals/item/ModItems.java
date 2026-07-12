@@ -180,6 +180,10 @@ public class ModItems {
         output.accept(ModItems.QUARTZ_HORSE_ARMOR);
     }
 
+    public static ResourceKey<Item> getRK(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
+
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, GemsAndCrystals.identifier(name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, GemsAndCrystals.identifier(name)))));
