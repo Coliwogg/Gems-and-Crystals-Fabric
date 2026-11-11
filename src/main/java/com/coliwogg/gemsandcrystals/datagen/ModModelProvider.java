@@ -17,6 +17,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
+import java.util.Map;
+
 public class ModModelProvider extends FabricModelProvider {
     private static final PropertyDispatch<VariantMutator> ROTATIONS_COLUMN_WITH_FACING =
             PropertyDispatch.modify(BlockStateProperties.FACING)
@@ -96,35 +98,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.QUARTZ_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateSpear(ModItems.QUARTZ_SPEAR);
 
-        itemModelGenerators.generateTrimmableItem(ModItems.RUBY_HELMET, ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.RUBY_CHESTPLATE, ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.RUBY_LEGGINGS, ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.RUBY_BOOTS, ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
-
-        itemModelGenerators.generateTrimmableItem(ModItems.SAPPHIRE_HELMET, ModArmorMaterials.SAPPHIRE_KEY, itemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.SAPPHIRE_CHESTPLATE, ModArmorMaterials.SAPPHIRE_KEY, itemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.SAPPHIRE_LEGGINGS, ModArmorMaterials.SAPPHIRE_KEY, itemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.SAPPHIRE_BOOTS, ModArmorMaterials.SAPPHIRE_KEY, itemModelGenerators.TRIM_PREFIX_BOOTS, false);
-
-        itemModelGenerators.generateTrimmableItem(ModItems.EMERALD_HELMET, ModArmorMaterials.EMERALD_KEY, itemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.EMERALD_CHESTPLATE, ModArmorMaterials.EMERALD_KEY, itemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.EMERALD_LEGGINGS, ModArmorMaterials.EMERALD_KEY, itemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.EMERALD_BOOTS, ModArmorMaterials.EMERALD_KEY, itemModelGenerators.TRIM_PREFIX_BOOTS, false);
-
-        itemModelGenerators.generateTrimmableItem(ModItems.TOPAZ_HELMET, ModArmorMaterials.TOPAZ_KEY, itemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.TOPAZ_CHESTPLATE, ModArmorMaterials.TOPAZ_KEY, itemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.TOPAZ_LEGGINGS, ModArmorMaterials.TOPAZ_KEY, itemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.TOPAZ_BOOTS, ModArmorMaterials.TOPAZ_KEY, itemModelGenerators.TRIM_PREFIX_BOOTS, false);
-
-        itemModelGenerators.generateTrimmableItem(ModItems.AMETHYST_HELMET, ModArmorMaterials.AMETHYST_KEY, itemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.AMETHYST_CHESTPLATE, ModArmorMaterials.AMETHYST_KEY, itemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.AMETHYST_LEGGINGS, ModArmorMaterials.AMETHYST_KEY, itemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.AMETHYST_BOOTS, ModArmorMaterials.AMETHYST_KEY, itemModelGenerators.TRIM_PREFIX_BOOTS, false);
-
-        itemModelGenerators.generateTrimmableItem(ModItems.QUARTZ_HELMET, ModArmorMaterials.QUARTZ_KEY, itemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.QUARTZ_CHESTPLATE, ModArmorMaterials.QUARTZ_KEY, itemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.QUARTZ_LEGGINGS, ModArmorMaterials.QUARTZ_KEY, itemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModelGenerators.generateTrimmableItem(ModItems.QUARTZ_BOOTS, ModArmorMaterials.QUARTZ_KEY, itemModelGenerators.TRIM_PREFIX_BOOTS, false);
+        itemModelGenerators.generateTrimmableArmorSet(ModItems.RUBY_HELMET, ModItems.RUBY_CHESTPLATE, ModItems.RUBY_LEGGINGS, ModItems.RUBY_BOOTS, false, Map.of());
+        itemModelGenerators.generateTrimmableArmorSet(ModItems.SAPPHIRE_HELMET, ModItems.SAPPHIRE_CHESTPLATE, ModItems.SAPPHIRE_LEGGINGS, ModItems.SAPPHIRE_BOOTS, false, Map.of());
+        itemModelGenerators.generateTrimmableArmorSet(ModItems.EMERALD_HELMET, ModItems.EMERALD_CHESTPLATE, ModItems.EMERALD_LEGGINGS, ModItems.EMERALD_BOOTS, false, Map.of());
+        itemModelGenerators.generateTrimmableArmorSet(ModItems.TOPAZ_HELMET, ModItems.TOPAZ_CHESTPLATE, ModItems.TOPAZ_LEGGINGS, ModItems.TOPAZ_BOOTS, false, Map.of());
+        itemModelGenerators.generateTrimmableArmorSet(ModItems.AMETHYST_HELMET, ModItems.AMETHYST_CHESTPLATE, ModItems.AMETHYST_LEGGINGS, ModItems.AMETHYST_BOOTS, false, Map.of());
+        itemModelGenerators.generateTrimmableArmorSet(ModItems.QUARTZ_HELMET, ModItems.QUARTZ_CHESTPLATE, ModItems.QUARTZ_LEGGINGS, ModItems.QUARTZ_BOOTS, false, Map.of());
 
         itemModelGenerators.declareCustomModelItem(ModBlocks.QUARTZ_CLUSTER.asItem());
         itemModelGenerators.declareCustomModelItem(ModBlocks.LARGE_QUARTZ_BUD.asItem());

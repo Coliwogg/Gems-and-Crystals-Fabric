@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemsandcrystals:ruby_block"
+        "recipes": "gemsandcrystals:ruby_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

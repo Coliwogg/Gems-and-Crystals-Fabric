@@ -2,7 +2,7 @@ package com.coliwogg.gemsandcrystals;
 
 import com.coliwogg.gemsandcrystals.datagen.*;
 import com.coliwogg.gemsandcrystals.trim.ModTrimMaterials;
-import com.coliwogg.gemsandcrystals.world.ModConfiguredFeatures;
+import com.coliwogg.gemsandcrystals.world.ModFeatures;
 import com.coliwogg.gemsandcrystals.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -26,7 +26,7 @@ public class GemsAndCrystalsDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void buildRegistry(RegistrySetBuilder registryBuilder) {
 		registryBuilder.add(Registries.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
-		registryBuilder.add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.add(Registries.FEATURE, ModFeatures::bootstrap);
 		registryBuilder.add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
 }

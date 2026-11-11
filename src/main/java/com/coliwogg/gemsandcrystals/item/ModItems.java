@@ -7,7 +7,8 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.equipment.ArmorType;
 
 import java.util.function.Function;
@@ -18,45 +19,45 @@ public class ModItems {
     public static final Item TOPAZ = registerItem("topaz", Item::new);
 
     public static final Item RUBY_SWORD = registerItem("ruby_sword", properties -> new Item(properties.sword(ModToolMaterials.RUBY, 4, -2.4f)));
-    public static final Item RUBY_SHOVEL = registerItem("ruby_shovel", properties -> new ShovelItem(ModToolMaterials.RUBY, 1.5f, -3f, properties));
+    public static final Item RUBY_SHOVEL = registerItem("ruby_shovel", properties -> new Item(properties.shovel(ModToolMaterials.RUBY, 1.5f, -3f)));
     public static final Item RUBY_PICKAXE = registerItem("ruby_pickaxe", properties -> new Item(properties.pickaxe(ModToolMaterials.RUBY, 1f, -2.8f)));
-    public static final Item RUBY_AXE = registerItem("ruby_axe", properties -> new AxeItem(ModToolMaterials.RUBY, 6f, -3.2f, properties));
-    public static final Item RUBY_HOE = registerItem("ruby_hoe", properties -> new HoeItem(ModToolMaterials.RUBY, -4f, 0f, properties));
+    public static final Item RUBY_AXE = registerItem("ruby_axe", properties -> new Item(properties.axe(ModToolMaterials.RUBY, 6f, -3.2f)));
+    public static final Item RUBY_HOE = registerItem("ruby_hoe", properties -> new Item(properties.hoe(ModToolMaterials.RUBY, -4f, 0f)));
     public static final Item RUBY_SPEAR = registerItem("ruby_spear", properties -> new Item(properties.spear(ModToolMaterials.RUBY,  1.15f, 1.20f, 0.40f, 1.5f, 7.0f, 5.5f, 5.1f, 8.75f, 4.6f)));
 
     public static final Item SAPPHIRE_SWORD = registerItem("sapphire_sword", properties -> new Item(properties.sword(ModToolMaterials.SAPPHIRE, 3, -2.4f)));
-    public static final Item SAPPHIRE_SHOVEL = registerItem("sapphire_shovel", properties -> new ShovelItem(ModToolMaterials.SAPPHIRE, 1.5f, -3f, properties));
+    public static final Item SAPPHIRE_SHOVEL = registerItem("sapphire_shovel", properties -> new Item(properties.shovel(ModToolMaterials.SAPPHIRE, 1.5f, -3f)));
     public static final Item SAPPHIRE_PICKAXE = registerItem("sapphire_pickaxe", properties -> new Item(properties.pickaxe(ModToolMaterials.SAPPHIRE, 1f, -2.8f)));
-    public static final Item SAPPHIRE_AXE = registerItem("sapphire_axe", properties -> new AxeItem(ModToolMaterials.SAPPHIRE, 5f, -3f, properties));
-    public static final Item SAPPHIRE_HOE = registerItem("sapphire_hoe", properties -> new HoeItem(ModToolMaterials.SAPPHIRE, -3f, 0f, properties));
+    public static final Item SAPPHIRE_AXE = registerItem("sapphire_axe", properties -> new Item(properties.axe(ModToolMaterials.SAPPHIRE, 5f, -3f)));
+    public static final Item SAPPHIRE_HOE = registerItem("sapphire_hoe", properties -> new Item(properties.hoe(ModToolMaterials.SAPPHIRE, -3f, 0f)));
     public static final Item SAPPHIRE_SPEAR = registerItem("sapphire_spear", properties -> new Item(properties.spear(ModToolMaterials.SAPPHIRE, 1.10f, 1.14f, 0.45f, 1.8f, 7.2f, 6.0f, 5.1f, 9.4f, 4.6f)));
 
     public static final Item EMERALD_SWORD = registerItem("emerald_sword", properties -> new Item(properties.sword(ModToolMaterials.EMERALD, 3, -2.4f)));
-    public static final Item EMERALD_SHOVEL = registerItem("emerald_shovel", properties -> new ShovelItem(ModToolMaterials.EMERALD, 1.5f, -3f, properties));
+    public static final Item EMERALD_SHOVEL = registerItem("emerald_shovel", properties -> new Item(properties.shovel(ModToolMaterials.EMERALD, 1.5f, -3f)));
     public static final Item EMERALD_PICKAXE = registerItem("emerald_pickaxe", properties -> new Item(properties.pickaxe(ModToolMaterials.EMERALD, 1f, -2.8f)));
-    public static final Item EMERALD_AXE = registerItem("emerald_axe", properties -> new AxeItem(ModToolMaterials.EMERALD, 5f, -3f, properties));
-    public static final Item EMERALD_HOE = registerItem("emerald_hoe", properties -> new HoeItem(ModToolMaterials.EMERALD, -3f, 0f, properties));
+    public static final Item EMERALD_AXE = registerItem("emerald_axe", properties -> new Item(properties.axe(ModToolMaterials.EMERALD, 5f, -3f)));
+    public static final Item EMERALD_HOE = registerItem("emerald_hoe", properties -> new Item(properties.hoe(ModToolMaterials.EMERALD, -3f, 0f)));
     public static final Item EMERALD_SPEAR = registerItem("emerald_spear", properties -> new Item(properties.spear(ModToolMaterials.EMERALD, 1.05f, 1.075f, 0.50f, 2.0f, 7.5f, 6.5f, 5.1f, 10.0f, 4.6f)));
 
     public static final Item TOPAZ_SWORD = registerItem("topaz_sword", properties -> new Item(properties.sword(ModToolMaterials.TOPAZ, 2, -1.8f)));
-    public static final Item TOPAZ_SHOVEL = registerItem("topaz_shovel", properties -> new ShovelItem(ModToolMaterials.TOPAZ, 1.5f, -3f, properties));
+    public static final Item TOPAZ_SHOVEL = registerItem("topaz_shovel", properties -> new Item(properties.shovel(ModToolMaterials.TOPAZ, 1.5f, -3f)));
     public static final Item TOPAZ_PICKAXE = registerItem("topaz_pickaxe", properties -> new Item(properties.pickaxe(ModToolMaterials.TOPAZ, 1f, -2.8f)));
-    public static final Item TOPAZ_AXE = registerItem("topaz_axe", properties -> new AxeItem(ModToolMaterials.TOPAZ, 4f, -2.9f, properties));
-    public static final Item TOPAZ_HOE = registerItem("topaz_hoe", properties -> new HoeItem(ModToolMaterials.TOPAZ, -2f, -1f, properties));
+    public static final Item TOPAZ_AXE = registerItem("topaz_axe", properties -> new Item(properties.axe(ModToolMaterials.TOPAZ, 4f, -2.9f)));
+    public static final Item TOPAZ_HOE = registerItem("topaz_hoe", properties -> new Item(properties.hoe(ModToolMaterials.TOPAZ, -2f, -1f)));
     public static final Item TOPAZ_SPEAR = registerItem("topaz_spear", properties -> new Item(properties.spear(ModToolMaterials.TOPAZ, 1.02f, 1.02f, 0.55f, 2.2f, 7.6f, 6.5f, 5.1f, 10.2f, 4.6f)));
 
     public static final Item AMETHYST_SWORD = registerItem("amethyst_sword", properties -> new Item(properties.sword(ModToolMaterials.AMETHYST, 2, -2.4f)));
-    public static final Item AMETHYST_SHOVEL = registerItem("amethyst_shovel", properties -> new ShovelItem(ModToolMaterials.AMETHYST, 1.5f, -3f, properties));
+    public static final Item AMETHYST_SHOVEL = registerItem("amethyst_shovel", properties -> new Item(properties.shovel(ModToolMaterials.AMETHYST, 1.5f, -3f)));
     public static final Item AMETHYST_PICKAXE = registerItem("amethyst_pickaxe", properties -> new Item(properties.pickaxe(ModToolMaterials.AMETHYST, 1f, -2.8f)));
-    public static final Item AMETHYST_AXE = registerItem("amethyst_axe", properties -> new AxeItem(ModToolMaterials.AMETHYST, 5f, -3.1f, properties));
-    public static final Item AMETHYST_HOE = registerItem("amethyst_hoe", properties -> new HoeItem(ModToolMaterials.AMETHYST, -2f, -1f, properties));
+    public static final Item AMETHYST_AXE = registerItem("amethyst_axe", properties -> new Item(properties.axe(ModToolMaterials.AMETHYST, 5f, -3.1f)));
+    public static final Item AMETHYST_HOE = registerItem("amethyst_hoe", properties -> new Item(properties.hoe(ModToolMaterials.AMETHYST, -2f, -1f)));
     public static final Item AMETHYST_SPEAR = registerItem("amethyst_spear", properties -> new Item(properties.spear(ModToolMaterials.AMETHYST, 1.00f, 1.00f, 0.57f, 2.3f, 7.6f, 6.5f, 5.1f, 10.5f, 4.6f)));
 
     public static final Item QUARTZ_SWORD = registerItem("quartz_sword", properties -> new Item(properties.sword(ModToolMaterials.QUARTZ, 3, -2.4f)));
-    public static final Item QUARTZ_SHOVEL = registerItem("quartz_shovel", properties -> new ShovelItem(ModToolMaterials.QUARTZ, 1.5f, -3f, properties));
+    public static final Item QUARTZ_SHOVEL = registerItem("quartz_shovel", properties -> new Item(properties.shovel(ModToolMaterials.QUARTZ, 1.5f, -3f)));
     public static final Item QUARTZ_PICKAXE = registerItem("quartz_pickaxe", properties -> new Item(properties.pickaxe(ModToolMaterials.QUARTZ, 1f, -2.8f)));
-    public static final Item QUARTZ_AXE = registerItem("quartz_axe", properties -> new AxeItem(ModToolMaterials.QUARTZ, 5f, -3.2f, properties));
-    public static final Item QUARTZ_HOE = registerItem("quartz_hoe", properties -> new HoeItem(ModToolMaterials.QUARTZ, -2f, -3f, properties));
+    public static final Item QUARTZ_AXE = registerItem("quartz_axe", properties -> new Item(properties.axe(ModToolMaterials.QUARTZ, 5f, -3.2f)));
+    public static final Item QUARTZ_HOE = registerItem("quartz_hoe", properties -> new Item(properties.hoe(ModToolMaterials.QUARTZ, -2f, -3f)));
     public static final Item QUARTZ_SPEAR = registerItem("quartz_spear", properties -> new Item(properties.spear(ModToolMaterials.QUARTZ, 0.95f, 0.95f, 0.62f, 2.4f, 7.8f, 6.6f, 5.1f, 11.0f, 4.6f)));
 
     public static final Item RUBY_HELMET = registerItem("ruby_helmet", properties -> new Item(properties.humanoidArmor(ModArmorMaterials.RUBY_ARMOR_MATERIAL, ArmorType.HELMET)));
