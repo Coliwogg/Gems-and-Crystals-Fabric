@@ -8,7 +8,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -41,7 +41,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
                 applyExplosionDecay(
                         ModBlocks.QUARTZ_CLUSTER,
                         LootItem.lootTableItem(Items.QUARTZ)
-                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2)))))
+                                .apply(SetItemCountFunction.setCount(ContextIntProviders.exactly(2)))))
         );
 
     }
